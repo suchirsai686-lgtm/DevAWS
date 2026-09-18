@@ -3,6 +3,7 @@ import { ArrowRight, CalendarDays, MapPin, Clock3, Check, ChevronDown, Linkedin,
 import Navbar from "./components/Navbar";
 import Countdown from "./components/Countdown";
 import Section from "./components/Section";
+import RegistrationForm from "./components/RegistrationForm";
 import { eventData } from "./data/eventData";
 
 function App() {
@@ -100,7 +101,7 @@ function App() {
         </Section>
 
         <Section id="registration" dark eyebrow="REGISTRATION" title="Save your seat.">
-          <div className="registration-card"><div><p className="lead">Ready to join AWS Student Community Day — Tirupati 2026?</p><p>Connect the confirmed KonfHub registration URL here. Payment and ticketing logic should remain on the ticketing platform.</p></div><a className="btn btn-orange btn-large" href={eventData.registrationUrl}>Get Tickets <ArrowRight /></a></div>
+          <RegistrationForm />
         </Section>
 
         <Section id="venue" eyebrow="VENUE" title="Find your way to the event.">
