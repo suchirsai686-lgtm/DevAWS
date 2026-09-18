@@ -37,7 +37,7 @@ function App() {
               <p className="eyebrow">COUNTDOWN</p>
               <h3>See you at Community Day</h3>
               <Countdown target={eventData.date} />
-              <div className="aws-line"><span /> Powered by AWS Cloud Clubs <span /></div>
+              <div className="aws-line"><span /> Powered by AWS SBG <span /></div>
             </div>
           </div>
         </section>
@@ -169,7 +169,7 @@ function App() {
           <div><h4>Explore</h4>{eventData.nav.map(([id, label]) => <a href={`#${id}`} key={id}>{label}</a>)}</div>
           <div><h4>Connect</h4><div className="socials"><a href="#"><Instagram/></a><a href="#"><Linkedin/></a><a href="#"><Youtube/></a></div><a href="mailto:hello@example.com">hello@example.com</a></div>
         </div>
-        <div className="container footer-bottom"><span>© 2026 AWS Student Community Day — Tirupati</span><span>Code of Conduct • Powered by AWS Cloud Clubs</span></div>
+        <div className="container footer-bottom"><span>© 2026 AWS Student Community Day — Tirupati</span><span>Code of Conduct • Powered by AWS SBG</span></div>
       </footer>
     </>
   );

@@ -27,11 +27,11 @@ export const eventData = {
     ["Career guidance", "Get practical direction for starting a career in cloud."],
     ["AWS resources", "Discover AWS tools, credits and learning opportunities."]
   ],
-  tracks: ["Generative AI", "Cloud Fundamentals", "Security", "Serverless", "DevOps", "Career in Cloud"],
+  tracks: ["Yet to be announced."],
   speakers: [
-    { name: "Speaker Name", role: "AWS / Industry", topic: "Session topic", image: "" },
-    { name: "Speaker Name", role: "Community Leader", topic: "Session topic", image: "" },
-    { name: "Speaker Name", role: "Cloud Practitioner", topic: "Session topic", image: "" }
+    { name: "Speaker Name", role: "AWS / Industry", topic: "Yet to be announced.", image: "" },
+    { name: "Speaker Name", role: "Community Leader", topic: "Yet to be announced.", image: "" },
+    { name: "Speaker Name", role: "Cloud Practitioner", topic: "Yet to be announced.", image: "" }
   ],
   agenda: [
     { time: "09:00 AM", type: "Check-in", title: "Registration & Networking", speaker: "Community Team", description: "Welcome attendees and connect with fellow builders." },
