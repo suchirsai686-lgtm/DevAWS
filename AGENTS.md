@@ -48,6 +48,38 @@ All placeholder content in `src/data/eventData.js` needs replacement before laun
 - Team member info
 - Gallery images
 
+## Frontend Agent Skills (mimo v2.5)
+
+### React Component Patterns
+- **Section wrapper**: Use `<Section id="..." eyebrow="..." title="..." dark={false}>` to wrap page sections. Toggle dark mode with `dark` prop.
+- **Data-driven rendering**: All dynamic content comes from `src/data/eventData.js`. Never hardcode event data in components.
+- **Icon imports**: Use `lucide-react` icons. Import specific icons: `import { IconName } from "lucide-react"`.
+- **State management**: Use `useState` for local UI state only (e.g., FAQ toggle, mobile menu). No global state needed.
+
+### Tailwind CSS Workflow
+- **Utility-first**: Use Tailwind classes directly in JSX. No CSS modules or styled-components.
+- **Custom properties**: Theme colors available as CSS variables (`--navy`, `--orange`). Use `var(--name)` in arbitrary values: `bg-[var(--navy)]`.
+- **Responsive**: Design mobile-first. Breakpoints: `@media (max-width: 560px)` and `@media (max-width: 850px)`.
+
+### Build & Verification
+- **No lint/typecheck**: Run `npm run build` to verify syntax and imports.
+- **Dev server**: Run `npm run dev` and test changes at `http://localhost:5173`.
+- **Hot reload**: Vite provides instant HMR. Edit files and refresh browser.
+
+### Common Tasks
+- **Add speaker**: Edit `eventData.speakers` array in `src/data/eventData.js`.
+- **Add FAQ**: Edit `eventData.faqs` array (format: `["Question", "Answer"]`).
+- **Reorder sections**: Move `<Section>` blocks in `src/App.jsx`.
+- **Change theme**: Modify CSS variables in `src/styles.css` `:root`.
+
+## Backend Agent Notes
+
+This is a **frontend-only** repository. There is no backend, API, or database.
+
+- Registration links point to external ticketing (KonfHub) — do not add backend logic.
+- All data is static and embedded in `eventData.js`.
+- If backend is needed later, create a separate service/repository.
+
 ## Git
 
 - Remote: `https://github.com/suchirsai686-lgtm/DevAWS.git`
