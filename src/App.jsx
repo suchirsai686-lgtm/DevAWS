@@ -94,7 +94,7 @@ function App() {
         </Section>
 
         <Section id="community" eyebrow="THE COMMUNITY" title="Student-led. Hands-on. Career-focused.">
-          <div className="community-panel"><div className="community-logo">AWS<br/><b>Cloud Club</b></div><div><p className="lead">Hosted by an AWS student community committed to practical learning, real-world projects and career preparation.</p><p>Replace this placeholder with the confirmed Tirupati organizing community, institution details, mission and social links.</p><a className="text-link" href="#">Visit community page <ArrowRight /></a></div></div>
+          <div className="community-panel"><div className="community-logo">AWS<br/><b>SBG</b></div><div><p className="lead">Hosted by an AWS student community committed to practical learning, real-world projects and career preparation.</p><p>Replace this placeholder with the confirmed Tirupati organizing community, institution details, mission and social links.</p><a className="text-link" href="#">Visit community page <ArrowRight /></a></div></div>
         </Section>
 
         <Section id="sponsors" dark eyebrow="SPONSORS & PARTNERS" title="Backed by the community.">
