@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, CalendarDays, MapPin, Clock3, Check, ChevronDown, Linkedin, Instagram, Youtube } from "lucide-react";
+import { ArrowRight, CalendarDays, MapPin, Clock3, Check, ChevronDown, Linkedin, Instagram, Youtube, Phone, MessageCircle } from "lucide-react";
 import Navbar from "./components/Navbar";
 import Countdown from "./components/Countdown";
 import Section from "./components/Section";
@@ -115,6 +115,52 @@ function App() {
         <Section id="team" eyebrow="ORGANIZING TEAM" title="Meet the people making it happen.">
           <div className="team-grid">{["Cloud Captain", "Lead Organizer", "Community Lead", "Operations"].map(role => <div className="team-card" key={role}><div className="team-avatar">TBA</div><strong>Team Member</strong><span>{role}</span></div>)}</div>
         </Section>
+
+        <section className="help-section">
+          <div className="help-glow" />
+          <div className="container help-content">
+            <div className="help-badge">
+              <Phone size={20} />
+              <span>NEED HELP?</span>
+            </div>
+            <h2 className="help-title">We're here for you</h2>
+            <p className="help-subtitle">Got questions? Reach out to our team directly.</p>
+            
+            <div className="help-cards">
+              <a href="tel:+919100208586" className="help-card">
+                <div className="help-card-glow" />
+                <div className="help-avatar">SH</div>
+                <h3>Siddhardha</h3>
+                <p>Event Coordinator</p>
+                <div className="help-phone">
+                  <Phone size={16} />
+                  <span>91002 08586</span>
+                </div>
+                <div className="help-action">
+                  <MessageCircle size={16} />
+                  <span>Tap to Call</span>
+                </div>
+              </a>
+
+              <a href="tel:+919492045240" className="help-card">
+                <div className="help-card-glow" />
+                <div className="help-avatar">BV</div>
+                <h3>Bavana</h3>
+                <p>Support Lead</p>
+                <div className="help-phone">
+                  <Phone size={16} />
+                  <span>94920 45240</span>
+                </div>
+                <div className="help-action">
+                  <MessageCircle size={16} />
+                  <span>Tap to Call</span>
+                </div>
+              </a>
+            </div>
+
+            <p className="help-note">Available 9 AM — 6 PM IST</p>
+          </div>
+        </section>
       </main>
 
       <footer className="footer">

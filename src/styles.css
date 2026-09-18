@@ -167,6 +167,28 @@ h1 span { color:#93a6ba; }
 .registration-success h3 { font-size:28px; margin:0 0 12px; }
 .registration-success p { color:#a1a1aa; margin:6px 0; line-height:1.6; }
 
+/* Help Section */
+.help-section { position:relative; padding:100px 0; background:#09090b; overflow:hidden; }
+.help-glow { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:600px; height:600px; background:radial-gradient(circle,rgba(139,92,246,.2),transparent 70%); pointer-events:none; }
+.help-content { position:relative; text-align:center; z-index:1; }
+.help-badge { display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:linear-gradient(135deg,rgba(139,92,246,.2),rgba(217,70,239,.2)); border:1px solid rgba(139,92,246,.4); border-radius:999px; color:#c4b5fd; font-size:12px; font-weight:800; letter-spacing:.1em; margin-bottom:20px; animation:pulse-glow 2s ease-in-out infinite; }
+@keyframes pulse-glow { 0%,100%{box-shadow:0 0 20px rgba(139,92,246,.2)} 50%{box-shadow:0 0 40px rgba(139,92,246,.4)} }
+.help-title { font-size:clamp(36px,5vw,56px); font-weight:900; letter-spacing:-.04em; margin:0 0 12px; background:linear-gradient(135deg,#fff,#c4b5fd); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.help-subtitle { font-size:18px; color:#a1a1aa; margin:0 0 50px; }
+.help-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:700px; margin:0 auto; }
+.help-card { position:relative; display:block; padding:35px 30px; background:linear-gradient(145deg,#18181b,#27272a); border:1px solid rgba(139,92,246,.3); border-radius:16px; text-decoration:none; color:white; transition:all .3s ease; overflow:hidden; }
+.help-card:hover { transform:translateY(-8px); border-color:rgba(139,92,246,.6); box-shadow:0 20px 50px rgba(139,92,246,.3),inset 0 0 30px rgba(139,92,246,.05); }
+.help-card-glow { position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle,rgba(139,92,246,.1),transparent 50%); opacity:0; transition:opacity .3s; pointer-events:none; }
+.help-card:hover .help-card-glow { opacity:1; }
+.help-avatar { width:70px; height:70px; margin:0 auto 16px; background:linear-gradient(135deg,var(--violet),var(--fuchsia)); border-radius:50%; display:grid; place-items:center; font-size:22px; font-weight:900; box-shadow:0 0 30px rgba(139,92,246,.4); }
+.help-card h3 { font-size:22px; margin:0 0 4px; font-weight:800; }
+.help-card p { font-size:13px; color:#a1a1aa; margin:0 0 16px; }
+.help-phone { display:flex; align-items:center; justify-content:center; gap:8px; padding:10px; background:rgba(139,92,246,.15); border-radius:8px; margin-bottom:12px; font-size:16px; font-weight:700; color:#c4b5fd; }
+.help-phone svg { color:var(--violet); }
+.help-action { display:flex; align-items:center; justify-content:center; gap:6px; font-size:12px; color:#71717a; text-transform:uppercase; letter-spacing:.1em; }
+.help-action svg { color:var(--violet); }
+.help-note { margin-top:30px; font-size:13px; color:#52525b; }
+
 @media (max-width: 850px) {
   .menu-btn { display:block; }
   .nav-links { display:none; position:absolute; top:70px; left:20px; right:20px; padding:18px; background:#091322; border:1px solid var(--line); border-radius:10px; flex-direction:column; align-items:stretch; }
@@ -190,4 +212,5 @@ h1 span { color:#93a6ba; }
   .footer-grid { grid-template-columns:1fr; gap:30px; }
   .footer-bottom { flex-direction:column; }
   .form-row { grid-template-columns:1fr; }
+  .help-cards { grid-template-columns:1fr; max-width:400px; }
 }
