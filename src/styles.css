@@ -48,7 +48,8 @@ a { color: inherit; text-decoration: none; }
 .dot { width:7px; height:7px; background:var(--violet); border-radius:50%; }
 h1 { font-size:clamp(44px,6vw,78px); line-height:.98; letter-spacing:-.055em; margin:20px 0; max-width:850px; }
 h1 span { color:#93a6ba; }
-.hero-tagline { font-size:20px; color:#c3cfda; max-width:650px; }
+.hero-title-img { max-width:100%; height:auto; max-height:180px; object-fit:contain; filter:drop-shadow(0 0 30px rgba(139,92,246,.3)); }
+.hero-tagline { font-size:20px; color:#a1a1aa; max-width:650px; }
 .quick-facts { display:flex; flex-wrap:wrap; gap:10px; margin:28px 0; }
 .quick-facts span { display:flex; gap:7px; align-items:center; padding:9px 12px; background:rgba(255,255,255,.06); border:1px solid var(--line); border-radius:6px; color:#d9e2ea; font-size:13px; }
 .quick-facts svg { width:15px; color:var(--violet); }

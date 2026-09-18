@@ -19,7 +19,7 @@ function App() {
           <div className="container hero-content">
             <div className="hero-copy">
               <div className="pill"><span className="dot" /> AWS Cloud Community • Tirupati</div>
-              <h1>{eventData.name}<span> — {eventData.location} {eventData.year}</span></h1>
+              <img src="/banner.jpeg" alt="AWS Student Community Day — Tirupati 2026" className="hero-title-img" />
               <p className="hero-tagline">{eventData.tagline}</p>
               <div className="quick-facts">
                 <span><CalendarDays /> December 2026</span>
