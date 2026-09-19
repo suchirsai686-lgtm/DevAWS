@@ -209,6 +209,12 @@ h1 span { color:#93a6ba; }
 .speakers-tba h3 { font-size:28px; margin:0 0 10px; color:#18181b; }
 .speakers-tba p { font-size:16px; color:#71717a; margin:0; }
 
+/* Stay Tuned */
+.stay-tuned { text-align:center; padding:60px 30px; background:linear-gradient(145deg,#18181b,#27272a); border:1px solid rgba(139,92,246,.3); border-radius:16px; max-width:550px; }
+.stay-tuned-icon { width:80px; height:80px; margin:0 auto 20px; background:linear-gradient(135deg,var(--violet),var(--fuchsia)); border-radius:50%; display:grid; place-items:center; color:white; box-shadow:0 0 40px rgba(139,92,246,.4); animation:pulse-glow 2s ease-in-out infinite; }
+.stay-tuned h3 { font-size:32px; margin:0 0 12px; background:linear-gradient(135deg,#fff,#c4b5fd); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.stay-tuned p { font-size:16px; color:#a1a1aa; margin:0 0 30px; line-height:1.6; }
+
 @media (max-width: 850px) {
   .menu-btn { display:block; }
   .nav-links { display:none; position:absolute; top:70px; left:20px; right:20px; padding:18px; background:#091322; border:1px solid var(--line); border-radius:10px; flex-direction:column; align-items:stretch; }

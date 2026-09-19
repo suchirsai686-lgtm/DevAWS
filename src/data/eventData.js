@@ -4,7 +4,7 @@ export const eventData = {
   year: "2026",
   tagline: "A student-led cloud computing conference",
   date: "2026-12-12T09:00:00+05:30", // Replace with confirmed event date/time.
-  venue: "Hyderabad, Telangana",
+  venue: "Matrusri Engineering College, Hyderabad",
   registrationUrl: "#registration",
   nav: [
     ["about", "About"],

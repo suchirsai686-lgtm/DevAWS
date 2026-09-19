@@ -103,20 +103,35 @@ function App() {
         </Section>
 
         <Section id="registration" dark eyebrow="REGISTRATION" title="Save your seat.">
-          <RegistrationForm />
+          <div className="stay-tuned">
+            <div className="stay-tuned-icon">
+              <ArrowRight size={32} />
+            </div>
+            <h3>Stay Tuned!</h3>
+            <p>Registration is opening soon. Be the first to grab your seat!</p>
+            <a className="btn btn-orange btn-large" href="https://docs.google.com/forms/d/e/1FAIpQLSe9Z0-7fmtB5t7Cda5sGOsUkr-mHNUhIWF8b0ccj1bGmKcLAA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+              Fill Speaker Interest Form <ArrowRight />
+            </a>
+          </div>
         </Section>
 
         <Section id="venue" eyebrow="VENUE" title="Find your way to the event.">
           <div className="venue-grid">
-            <a href="https://maps.app.goo.gl/wq2wSZ6HacUkY71W9" target="_blank" rel="noopener noreferrer" className="map-link">
-              <div className="map-placeholder-large">
-                <MapPin size={48} />
-                <span>Click to open in Google Maps</span>
-              </div>
-            </a>
+            <div className="map-embed">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.8!2d78.5078038!3d17.3579983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98686ae78299%3A0xb15620bbd3e6bec!2sMatrusri%20Engineering%20College!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
+                width="100%" 
+                height="400" 
+                style={{border:0, borderRadius:'10px'}} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Matrusri Engineering College"
+              />
+            </div>
             <div className="venue-info">
               <h3>{eventData.venue}</h3>
-              <p>Join us at our venue in Hyderabad. Click below for directions and parking information.</p>
+              <p>Join us at Matrusri Engineering College in Hyderabad. Click below for directions and parking information.</p>
               <a className="btn btn-orange" href="https://maps.app.goo.gl/wq2wSZ6HacUkY71W9" target="_blank" rel="noopener noreferrer">
                 <MapPin size={16} /> Get Directions
               </a>
