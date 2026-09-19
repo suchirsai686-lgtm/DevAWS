@@ -215,6 +215,11 @@ h1 span { color:#93a6ba; }
 .stay-tuned h3 { font-size:32px; margin:0 0 12px; background:linear-gradient(135deg,#fff,#c4b5fd); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .stay-tuned p { font-size:16px; color:#a1a1aa; margin:0 0 30px; line-height:1.6; }
 
+/* Speaker Interest */
+.speaker-interest-box { text-align:center; padding:50px 30px; background:white; border:1px solid #e4e4e7; border-radius:16px; max-width:550px; }
+.speaker-interest-box h3 { font-size:26px; margin:0 0 12px; color:#18181b; }
+.speaker-interest-box p { font-size:16px; color:#71717a; margin:0 0 30px; line-height:1.6; }
+
 @media (max-width: 850px) {
   .menu-btn { display:block; }
   .nav-links { display:none; position:absolute; top:70px; left:20px; right:20px; padding:18px; background:#091322; border:1px solid var(--line); border-radius:10px; flex-direction:column; align-items:stretch; }

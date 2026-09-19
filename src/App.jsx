@@ -109,6 +109,13 @@ function App() {
             </div>
             <h3>Stay Tuned!</h3>
             <p>Registration is opening soon. Be the first to grab your seat!</p>
+          </div>
+        </Section>
+
+        <Section id="speaker-interest" eyebrow="SPEAKER INTEREST" title="Want to speak at the event?">
+          <div className="speaker-interest-box">
+            <h3>Share your expertise</h3>
+            <p>Passionate about cloud computing? Fill out our speaker interest form and join our amazing lineup!</p>
             <a className="btn btn-orange btn-large" href="https://docs.google.com/forms/d/e/1FAIpQLSe9Z0-7fmtB5t7Cda5sGOsUkr-mHNUhIWF8b0ccj1bGmKcLAA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
               Fill Speaker Interest Form <ArrowRight />
             </a>
