@@ -196,6 +196,12 @@ h1 span { color:#93a6ba; }
 .help-action svg { color:var(--violet); }
 .help-note { margin-top:30px; font-size:13px; color:#52525b; }
 
+/* Speakers TBA */
+.speakers-tba { text-align:center; padding:60px 30px; background:linear-gradient(145deg,#f4f4f5,#fafafa); border:1px solid #e4e4e7; border-radius:16px; max-width:500px; }
+.tba-icon { width:80px; height:80px; margin:0 auto 20px; background:linear-gradient(135deg,var(--violet),var(--fuchsia)); border-radius:50%; display:grid; place-items:center; color:white; box-shadow:0 0 40px rgba(139,92,246,.3); }
+.speakers-tba h3 { font-size:28px; margin:0 0 10px; color:#18181b; }
+.speakers-tba p { font-size:16px; color:#71717a; margin:0; }
+
 @media (max-width: 850px) {
   .menu-btn { display:block; }
   .nav-links { display:none; position:absolute; top:70px; left:20px; right:20px; padding:18px; background:#091322; border:1px solid var(--line); border-radius:10px; flex-direction:column; align-items:stretch; }

@@ -1,10 +1,10 @@
 export const eventData = {
   name: "AWS Student Community Day",
-  location: "Tirupati",
+  location: "Hyderabad",
   year: "2026",
   tagline: "A student-led cloud computing conference",
   date: "2026-12-12T09:00:00+05:30", // Replace with confirmed event date/time.
-  venue: "Tirupati, Andhra Pradesh",
+  venue: "Hyderabad, Andhra Pradesh",
   registrationUrl: "#registration",
   nav: [
     ["about", "About"],

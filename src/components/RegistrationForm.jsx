@@ -47,7 +47,7 @@ export default function RegistrationForm() {
           <Check size={32} />
         </div>
         <h3>You're registered!</h3>
-        <p>Thank you for registering for AWS Student Community Day — Tirupati 2026.</p>
+        <p>Thank you for registering for AWS Student Community Day — Hyderabad 2026.</p>
         <p>We'll send you a confirmation email shortly.</p>
       </div>
     );

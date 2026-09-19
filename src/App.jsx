@@ -18,12 +18,12 @@ function App() {
           <div className="hero-grid" />
           <div className="container hero-content">
             <div className="hero-copy">
-              <div className="pill"><span className="dot" /> AWS Cloud Community • Tirupati</div>
+              <div className="pill"><span className="dot" /> AWS Cloud Community • Hyderabad</div>
               <h1 className="hero-title">
                 <span className="aws-logo-text">aws</span>
                 <span className="title-student">STUDENT</span>
                 <span className="title-community">COMMUNITY DAY</span>
-                <span className="title-location">Tirupati 2026</span>
+                <span className="title-location">Hyderabad 2026</span>
               </h1>
               <p className="hero-tagline">{eventData.tagline}</p>
               <div className="quick-facts">
@@ -50,7 +50,7 @@ function App() {
         <Section id="about" eyebrow="ABOUT THE EVENT" title="One day. Real skills. A stronger cloud community.">
           <div className="about-grid">
             <div>
-              <p className="lead">AWS Student Community Day — Tirupati is a student-focused cloud computing conference designed to bring learning, building and community together.</p>
+              <p className="lead">AWS Student Community Day — Hyderabad is a student-focused cloud computing conference designed to bring learning, building and community together.</p>
               <p>Explore AWS and modern cloud technologies through talks, practical workshops, networking and career-focused conversations. The page is structured so confirmed event content can be dropped in without changing the component architecture.</p>
             </div>
             <div className="stats-grid">
@@ -79,13 +79,10 @@ function App() {
         </Section>
 
         <Section id="speakers" eyebrow="SPEAKERS" title="Learn from people building in the real world.">
-          <div className="speaker-grid">
-            {eventData.speakers.map((speaker, i) => (
-              <article className="speaker-card" key={i}>
-                <div className="speaker-photo">{speaker.image ? <img src={speaker.image} alt={speaker.name} /> : <span>{speaker.name.slice(0, 1)}</span>}</div>
-                <div className="speaker-body"><h3>{speaker.name}</h3><p>{speaker.role}</p><span>{speaker.topic}</span><a href="#" aria-label={`${speaker.name} LinkedIn`}><Linkedin size={17}/></a></div>
-              </article>
-            ))}
+          <div className="speakers-tba">
+            <div className="tba-icon"><Linkedin size={40}/></div>
+            <h3>Yet to be announced.</h3>
+            <p>Stay tuned for our exciting speaker lineup!</p>
           </div>
         </Section>
 
@@ -94,7 +91,7 @@ function App() {
         </Section>
 
         <Section id="community" eyebrow="THE COMMUNITY" title="Student-led. Hands-on. Career-focused.">
-          <div className="community-panel"><div className="community-logo">AWS<br/><b>SBG</b></div><div><p className="lead">Hosted by an AWS student community committed to practical learning, real-world projects and career preparation.</p><p>Replace this placeholder with the confirmed Tirupati organizing community, institution details, mission and social links.</p><a className="text-link" href="#">Visit community page <ArrowRight /></a></div></div>
+          <div className="community-panel"><div className="community-logo">AWS<br/><b>SBG</b></div><div><p className="lead">Hosted by an AWS student community committed to practical learning, real-world projects and career preparation.</p><p>Replace this placeholder with the confirmed Hyderabad organizing community, institution details, mission and social links.</p><a className="text-link" href="#">Visit community page <ArrowRight /></a></div></div>
         </Section>
 
         <Section id="sponsors" dark eyebrow="SPONSORS & PARTNERS" title="Backed by the community.">
@@ -174,7 +171,7 @@ function App() {
           <div><h4>Explore</h4>{eventData.nav.map(([id, label]) => <a href={`#${id}`} key={id}>{label}</a>)}</div>
           <div><h4>Connect</h4><div className="socials"><a href="#"><Instagram/></a><a href="#"><Linkedin/></a><a href="#"><Youtube/></a></div><a href="mailto:hello@example.com">hello@example.com</a></div>
         </div>
-        <div className="container footer-bottom"><span>© 2026 AWS Student Community Day — Tirupati</span><span>Code of Conduct • Powered by AWS SBG</span></div>
+        <div className="container footer-bottom"><span>© 2026 AWS Student Community Day — Hyderabad</span><span>Code of Conduct • Powered by AWS SBG</span></div>
       </footer>
     </>
   );
