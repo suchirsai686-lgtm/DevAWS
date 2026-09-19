@@ -110,7 +110,7 @@ function App() {
           <div className="venue-grid">
             <div className="map-embed">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2!2d78.4867!3d17.385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzA2LjAiTiA3OMKwMjknMTIuMSJF!5e0!3m2!1sen!2sin!4v1234567890" 
+                src="https://www.google.com/maps?q=https://maps.app.goo.gl/wq2wSZ6HacUkY71W9&output=embed" 
                 width="100%" 
                 height="400" 
                 style={{border:0, borderRadius:'10px'}} 
@@ -123,7 +123,7 @@ function App() {
             <div className="venue-info">
               <h3>{eventData.venue}</h3>
               <p>Join us at our venue in Hyderabad. Click below for directions and parking information.</p>
-              <a className="btn btn-dark" href="https://maps.app.goo.gl/wq2wSZ6HacUkY71W9" target="_blank" rel="noopener noreferrer">
+              <a className="btn btn-orange" href="https://maps.app.goo.gl/wq2wSZ6HacUkY71W9" target="_blank" rel="noopener noreferrer">
                 <MapPin size={16} /> Get Directions
               </a>
             </div>
