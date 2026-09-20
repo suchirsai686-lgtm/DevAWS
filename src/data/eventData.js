@@ -32,18 +32,15 @@ export const eventData = {
     { title: "Panel Discussion", desc: "Join an expert lineup for a moderated debate on a topic you care about.", icon: "users" }
   ],
   experienceItems: [
-    { title: "Tea & Coffee", desc: "All-day refills", icon: "coffee" },
-    { title: "Snacks", desc: "Between sessions", icon: "package" },
     { title: "Lunch", desc: "Full buffet included", icon: "utensils" },
     { title: "Swag Kit", desc: "Tee, stickers & more", icon: "gift" },
     { title: "Certificate", desc: "AWS-branded", icon: "award" },
     { title: "Networking", desc: "Builders & recruiters", icon: "users" },
-    { title: "Photo-ops", desc: "Capture the day", icon: "camera" },
-    { title: "Free Wi-Fi", desc: "For all attendees", icon: "wifi" }
+    { title: "Photo-ops", desc: "Capture the day", icon: "camera" }
   ],
   pricing: {
-    solo: { price: "₹200", per: "/person", features: ["Full day access", "Swag kit & meals", "Networking sessions"] },
-    squad: { price: "₹700", per: "/total", features: ["Everything in Individual Pass", "Dedicated group seating", "Exclusive squad photo-op"] }
+    solo: { price: "₹149", per: "/person", features: ["Full day access", "Swag kit & meals", "Networking sessions"] },
+    squad: { price: "₹549", per: "/total", features: ["Everything in Individual Pass", "Dedicated group seating", "Exclusive squad photo-op"] }
   },
   speakers: [
     {
@@ -81,9 +78,7 @@ export const eventData = {
     }
   ],
   communityPartners: [
-    { name: "The Student Spot", logo: "https://www.awsmjcet.in/scd/community_partners/thestudentspot_logo.png" },
-    { name: "Linkedinspire", logo: "https://www.awsmjcet.in/scd/community_partners/linkedinspire_logo.png" },
-    { name: "CodeQuesters", logo: "https://www.awsmjcet.in/scd/community_partners/codequesters_logo.png" }
+    { name: "DevCatalyst", logo: "" }
   ],
   sponsors: [
     { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
@@ -98,9 +93,9 @@ export const eventData = {
     image: "/scd/clg_location_pic.avif"
   },
   eventSpaces: [
-    { title: "Ghulam Ahmed Hall", label: "Main Stage", desc: "Headline keynotes and plenary sessions. The day opens and closes on this stage.", icon: "monitor" },
-    { title: "Seminar Hall", label: "Parallel Sessions", desc: "Panel discussions, lightning talks, and moderated conversations with industry guests.", icon: "users" },
-    { title: "AI Lab", label: "Hands-on Workshops", desc: "Roll-up-your-sleeves build sessions. Bring a laptop, leave having shipped something.", icon: "layout" }
+    { title: "N104", label: "Data Analytics", desc: "Headline keynotes and plenary sessions. The day opens and closes on this stage.", icon: "monitor" },
+    { title: "KVR Hall", label: "DevOps Engineering", desc: "Panel discussions, lightning talks, and moderated conversations with industry guests.", icon: "users" },
+    { title: "MV Sridhar Hall", label: "Cybersecurity", desc: "Roll-up-your-sleeves build sessions. Bring a laptop, leave having shipped something.", icon: "layout" }
   ],
   governingBody: [
     { name: "Vahaj ur Rahman", image: "https://www.awsmjcet.in/images/profiles/vahaj.png" },

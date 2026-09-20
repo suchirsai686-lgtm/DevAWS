@@ -168,7 +168,7 @@ function App() {
         {/* PRICING */}
         <section className="scd-section">
           <div className="scd-container">
-            <div className="text-center"><h2 className="section-title">Tickets & Pricing</h2><p className="section-desc">Pick the pass that fits you — one all-access ticket to everything we're packing into Student Community Day.</p></div>
+            <div className="text-center"><h2 className="section-title">Tickets & Pricing</h2><p className="section-desc">Pick the pass that fits you — one all-access ticket to everything we're packing into Student Community Day.</p><div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 12, padding: '8px 20px', borderRadius: 999, background: 'linear-gradient(135deg, rgba(139,92,246,.15), rgba(217,70,239,.1))', border: '1px solid rgba(139,92,246,.25)', color: '#c084fc', fontSize: 13, fontWeight: 600, letterSpacing: '.03em' }}><Gift size={16} /><span>Early Bird Offer</span></div></div>
             <div className="pricing-grid">
               <div className="pricing-card solo"><div className="card-inner">
                 <span className="tier">Solo</span><h3>Individual Pass</h3>
@@ -230,7 +230,10 @@ function App() {
             <div className="partner-grid">
               {eventData.communityPartners.map((p) => (
                 <div key={p.name} className="partner-card">
-                  <div className="partner-content"><img src={p.logo} alt={p.name} /><span className="partner-name">{p.name}</span></div>
+                  <div className="partner-content">
+                    {p.logo ? <img src={p.logo} alt={p.name} /> : <div style={{ width: 120, height: 48, borderRadius: 8, background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#a1a1aa', fontSize: 14, fontWeight: 600, letterSpacing: '.05em' }}>{p.name}</div>}
+                    <span className="partner-name">{p.name}</span>
+                  </div>
                 </div>
               ))}
             </div>
