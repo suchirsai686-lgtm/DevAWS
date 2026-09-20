@@ -80,17 +80,19 @@ function App() {
         </Section>
 
         <Section id="speakers" eyebrow="SPEAKERS" title="Learn from people building in the real world.">
-          <div className="speakers-tba">
-            <div className="tba-icon"><Linkedin size={40}/></div>
-            <h3>Yet to be announced.</h3>
-            <p>Stay tuned for our exciting speaker lineup!</p>
-          </div>
-          <div className="speaker-interest-box" style={{marginTop: '40px'}}>
-            <h3>Share your expertise</h3>
-            <p>Passionate about cloud computing? Fill out our speaker interest form and join our amazing lineup!</p>
-            <a className="btn btn-orange btn-large" href="https://docs.google.com/forms/d/e/1FAIpQLSe9Z0-7fmtB5t7Cda5sGOsUkr-mHNUhIWF8b0ccj1bGmKcLAA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
-              Fill Speaker Interest Form <ArrowRight />
-            </a>
+          <div className="speakers-layout">
+            <div className="speakers-tba">
+              <div className="tba-icon"><Linkedin size={40}/></div>
+              <h3>Yet to be announced.</h3>
+              <p>Stay tuned for our exciting speaker lineup!</p>
+            </div>
+            <div className="speaker-interest-box">
+              <h3>Share your expertise</h3>
+              <p>Passionate about cloud computing? Fill out our speaker interest form and join our amazing lineup!</p>
+              <a className="btn btn-orange btn-large" href="https://docs.google.com/forms/d/e/1FAIpQLSe9Z0-7fmtB5t7Cda5sGOsUkr-mHNUhIWF8b0ccj1bGmKcLAA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+                Fill Speaker Interest Form <ArrowRight />
+              </a>
+            </div>
           </div>
         </Section>
 
