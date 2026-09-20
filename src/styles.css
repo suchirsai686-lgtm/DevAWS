@@ -90,7 +90,7 @@ ul { list-style: none; }
 
 /* Mobile menu */
 .mobile-menu-btn {
-  display: block; position: fixed; right: 16px; top: 16px; z-index: 5001;
+  display: block; position: fixed; left: 50%; transform: translateX(-50%); top: 16px; z-index: 5001;
   padding: 8px; border-radius: 9999px; background: black; border: none;
   color: white; cursor: pointer;
 }

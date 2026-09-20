@@ -19,7 +19,7 @@ export const eventData = {
       { html: '<span class="highlight">AWS Student Builder Group mecs</span> is a dynamic, student-led community supported by <span class="highlight">Amazon Web Services (AWS)</span>. The AWS Student Community Day at mecs will be held in <span class="highlight">10th June 2026</span>. Our mission is to empower students with the right skills, tools, and opportunities to explore the cloud, build innovative solutions, and collaborate with peers and industry leaders. We regularly host technical workshops, hackathons, and mentorship sessions to help students transform ideas into impactful projects.' },
       { html: 'The <span class="highlight">AWS Student Community Day (SCD)</span> is the flagship annual event of the AWS Student Builder Group. It is a one-day, <span class="highlight">student-driven conference</span> designed to celebrate technology, innovation, and collaboration. Organized entirely by student leaders with guidance from AWS, SCD brings together cloud enthusiasts, developers, and industry experts to share knowledge, showcase real-world use cases, and inspire the next generation of builders.' }
     ],
-    image: "/scd/About_the_Event_pic.jpeg"
+    image: "/about-event.jpg"
   },
   scdInfo: {
     description: 'AWS Student Community Day (SCD) are <span class="highlight">one-day, community-led conferences</span> where event logistics and content are <span class="highlight">planned, sourced, and delivered by student community leaders.</span>',
