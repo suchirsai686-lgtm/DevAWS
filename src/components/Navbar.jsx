@@ -1,34 +1,39 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { eventData } from "../data/eventData";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
-    <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
-      <div className="container nav-inner">
-        <a href="#" className="brand" aria-label="AWS Student Community Day home">
-          <span className="aws-mark">aws</span>
-          <span>Student Community Day</span>
+    <>
+      {/* Desktop floating nav */}
+      <div className="floating-nav">
+        <a className="nav-link" href="https://www.awsmjcet.in/">Home</a>
+        <a className="neon-btn-wrapper" href={eventData.registrationUrl}>
+          <div className="neon-btn-glow" />
+          <div className="neon-btn-inner">SCD</div>
         </a>
-        <button className="menu-btn" onClick={() => setOpen(!open)} aria-label="Toggle navigation">
-          {open ? <X /> : <Menu />}
-        </button>
-        <nav className={open ? "nav-links open" : "nav-links"}>
-          {eventData.nav.map(([id, label]) => (
-            <a key={id} href={`#${id}`} onClick={() => setOpen(false)}>{label}</a>
-          ))}
-          <a className="btn btn-orange" href={eventData.registrationUrl} onClick={() => setOpen(false)}>Register Now</a>
-        </nav>
+        {eventData.nav.map(([id, label]) => (
+          <a key={id} className="nav-link" href={`#${id}`}>{label}</a>
+        ))}
+        <a className="membership-pill" href={eventData.registrationUrl} target="_blank" rel="noopener noreferrer">Membership</a>
       </div>
-    </header>
+
+      {/* Mobile menu button */}
+      <button className="mobile-menu-btn" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+        {open ? <X size={20} /> : <Menu size={20} />}
+      </button>
+
+      {/* Mobile dropdown */}
+      {open && (
+        <div className="floating-nav" style={{ top: 60, maxWidth: 'calc(100% - 32px)', flexDirection: 'column', gap: 12, display: 'flex' }}>
+          {eventData.nav.map(([id, label]) => (
+            <a key={id} className="nav-link" href={`#${id}`} onClick={() => setOpen(false)} style={{ padding: '4px 0' }}>{label}</a>
+          ))}
+          <a className="membership-pill" href={eventData.registrationUrl} target="_blank" rel="noopener noreferrer" style={{ textAlign: 'center' }}>Membership</a>
+        </div>
+      )}
+    </>
   );
 }

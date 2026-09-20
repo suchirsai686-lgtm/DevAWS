@@ -1,56 +1,121 @@
 export const eventData = {
   name: "AWS Student Community Day",
-  location: "Hyderabad",
+  location: "MJCET",
   year: "2026",
-  tagline: "A student-led cloud computing conference",
-  date: "2026-12-12T09:00:00+05:30", // Replace with confirmed event date/time.
-  venue: "Matrusri Engineering College, Hyderabad",
-  registrationUrl: "#registration",
+  tagline: "A premier conference led by students, for students. Dive into the world of AWS, connect with industry leaders, and accelerate your cloud computing journey.",
+  date: "2026-06-10T09:00:00+05:30",
+  venue: "Muffakham Jah College of Engineering & Technology",
+  venueShort: "MJCET",
+  registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeFZHIXnUFz46NuwibriOUkL7rEjk-PQetA8X0z2o9TCQK4pA/viewform",
+  registrationGroupUrl: "#",
   nav: [
     ["about", "About"],
-    ["agenda", "Agenda"],
     ["speakers", "Speakers"],
     ["sponsors", "Sponsors"],
-    ["faq", "FAQ"]
+    ["venue", "Venue"],
   ],
-  stats: [
-    ["Speakers", "10+"],
-    ["Sessions", "15+"],
-    ["Attendees", "500+"],
-    ["Tracks", "3"]
+  about: {
+    paragraphs: [
+      { html: '<span class="highlight">AWS Student Builder Group MJCET</span> is a dynamic, student-led community supported by <span class="highlight">Amazon Web Services (AWS)</span>. The AWS Student Community Day at MJCET will be held in <span class="highlight">10th June 2026</span>. Our mission is to empower students with the right skills, tools, and opportunities to explore the cloud, build innovative solutions, and collaborate with peers and industry leaders. We regularly host technical workshops, hackathons, and mentorship sessions to help students transform ideas into impactful projects.' },
+      { html: 'The <span class="highlight">AWS Student Community Day (SCD)</span> is the flagship annual event of the AWS Student Builder Group. It is a one-day, <span class="highlight">student-driven conference</span> designed to celebrate technology, innovation, and collaboration. Organized entirely by student leaders with guidance from AWS, SCD brings together cloud enthusiasts, developers, and industry experts to share knowledge, showcase real-world use cases, and inspire the next generation of builders.' }
+    ],
+    image: "/scd/About_the_Event_pic.jpeg"
+  },
+  scdInfo: {
+    description: 'AWS Student Community Day (SCD) are <span class="highlight">one-day, community-led conferences</span> where event logistics and content are <span class="highlight">planned, sourced, and delivered by student community leaders.</span>',
+    subText: 'While a standard AWS Student Builder Group event focuses on one topic, a Student Community Day features <span class="highlight">3+ topics, sessions, and speakers</span> to gather, educate, and celebrate with a wider array of audiences.'
+  },
+  speakerFormats: [
+    { title: "Keynote", desc: "Set the tone for the day with a vision-shaping talk on cloud, AI, or what's next.", icon: "mic" },
+    { title: "Workshop", desc: "Roll up your sleeves — guide the community through a hands-on build session.", icon: "code" },
+    { title: "Lightning Talk", desc: "Five minutes, one sharp idea. Fast, focused, and unforgettable.", icon: "zap" },
+    { title: "Panel Discussion", desc: "Join an expert lineup for a moderated debate on a topic you care about.", icon: "users" }
   ],
-  highlights: [
-    ["Expert-led sessions", "Learn directly from cloud practitioners and community leaders."],
-    ["Hands-on workshops", "Build practical skills with guided, project-oriented sessions."],
-    ["Networking", "Meet students, builders, mentors and cloud enthusiasts."],
-    ["Swag & certificates", "Celebrate your participation and learning journey."],
-    ["Career guidance", "Get practical direction for starting a career in cloud."],
-    ["AWS resources", "Discover AWS tools, credits and learning opportunities."]
+  experienceItems: [
+    { title: "Tea & Coffee", desc: "All-day refills", icon: "coffee" },
+    { title: "Snacks", desc: "Between sessions", icon: "package" },
+    { title: "Lunch", desc: "Full buffet included", icon: "utensils" },
+    { title: "Swag Kit", desc: "Tee, stickers & more", icon: "gift" },
+    { title: "Certificate", desc: "AWS-branded", icon: "award" },
+    { title: "Networking", desc: "Builders & recruiters", icon: "users" },
+    { title: "Photo-ops", desc: "Capture the day", icon: "camera" },
+    { title: "Free Wi-Fi", desc: "For all attendees", icon: "wifi" }
   ],
-  tracks: ["Yet to be announced."],
+  pricing: {
+    solo: { price: "₹200", per: "/person", features: ["Full day access", "Swag kit & meals", "Networking sessions"] },
+    squad: { price: "₹700", per: "/total", features: ["Everything in Individual Pass", "Dedicated group seating", "Exclusive squad photo-op"] }
+  },
   speakers: [
-    { name: "Speaker Name", role: "AWS / Industry", topic: "Yet to be announced.", image: "" },
-    { name: "Speaker Name", role: "Community Leader", topic: "Yet to be announced.", image: "" },
-    { name: "Speaker Name", role: "Cloud Practitioner", topic: "Yet to be announced.", image: "" }
+    {
+      name: "Gaurav Kankaria",
+      role: "Head of Analytics & AI/ML @Oneture",
+      credential: "Ex Data Scientist | ISBian",
+      ambassador: "AWS Global AI Ambassador",
+      topic: "AI First Future: Building Skills, Businesses & Careers in the Age of Intelligence",
+      image: "https://www.awsmjcet.in/scd/speakers/Gaurav_Kankaria.png",
+      blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
+      blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
+      blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
+    },
+    {
+      name: "Tajamul Khan",
+      role: "Senior Data Scientist @ Eastman",
+      credential: "Ex - Google, Amazon | MITian",
+      ambassador: "Top 1% Data Scientist (Worldwide)",
+      topic: "Entering the Top 1%: Building a FAANG-Ready Skillset in AI & Data Science",
+      image: "https://www.awsmjcet.in/scd/speakers/Tajamul_khan.png",
+      blobRadius: "55% 45% 60% 40% / 40% 55% 45% 60%",
+      blobGradient: "linear-gradient(135deg, rgba(99,102,241,.16), rgba(139,92,246,.1))",
+      blobWidth: "70%", blobHeight: "85%", blobTop: "-2%", blobLeft: "45%"
+    },
+    {
+      name: "Avinash Reddy Thipparthi",
+      role: "Founder, Aviz Academy",
+      credential: "AWS Community Builder (3x) | Docker Captain",
+      ambassador: "Cloud & DevOps Architect | 14+ Years | 50,000+ Learners",
+      topic: "AI Agents are the new apps: How AWS and AI are renewing software in 2026",
+      image: "https://www.awsmjcet.in/scd/speakers/Avinash_Reddy_Thipparthi.png",
+      blobRadius: "45% 55% 40% 60% / 60% 45% 55% 40%",
+      blobGradient: "linear-gradient(135deg, rgba(168,85,247,.17), rgba(139,92,246,.11))",
+      blobWidth: "65%", blobHeight: "75%", blobTop: "5%", blobLeft: "48%"
+    }
   ],
-  agenda: [
-    { time: "09:00 AM", type: "Check-in", title: "Registration & Networking", speaker: "Community Team", description: "Welcome attendees and connect with fellow builders." },
-    { time: "10:00 AM", type: "Keynote", title: "Opening Keynote", speaker: "TBA", description: "Kick off the community day and explore what is ahead." },
-    { time: "11:00 AM", type: "Workshop", title: "Cloud & Generative AI", speaker: "TBA", description: "A practical session exploring modern AWS-powered workflows." },
-    { time: "01:00 PM", type: "Break", title: "Lunch & Networking", speaker: "", description: "Recharge and meet other participants." },
-    { time: "02:00 PM", type: "Panel", title: "Careers in Cloud", speaker: "TBA", description: "Real-world perspectives on skills, portfolios and opportunities." }
+  communityPartners: [
+    { name: "The Student Spot", logo: "https://www.awsmjcet.in/scd/community_partners/thestudentspot_logo.png" },
+    { name: "Linkedinspire", logo: "https://www.awsmjcet.in/scd/community_partners/linkedinspire_logo.png" },
+    { name: "CodeQuesters", logo: "https://www.awsmjcet.in/scd/community_partners/codequesters_logo.png" }
   ],
   sponsors: [
-    { tier: "Platinum", names: ["Sponsor Name"] },
-    { tier: "Gold", names: ["Partner Name", "Partner Name"] },
-    { tier: "Community Partner", names: ["Community Name"] }
+    { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
+    { name: "TBA", tba: true },
+    { name: "TBA", tba: true },
+    { name: "TBA", tba: true }
   ],
-  faqs: [
-    ["Who can attend?", "The event is designed primarily for students and cloud enthusiasts. Replace this answer with the confirmed eligibility rules."],
-    ["Is it free?", "Replace this with the confirmed ticket pricing or free-entry information."],
-    ["Do I need AWS knowledge beforehand?", "No prior knowledge should be assumed unless a specific session says otherwise."],
-    ["Will there be a certificate?", "Replace this with the confirmed certificate policy."],
-    ["What is the dress code?", "Replace this with the event-specific dress code if one is required."],
-    ["Can I volunteer?", "Add the confirmed volunteer process or contact details here."]
-  ]
+  venueDetails: {
+    college: "Muffakham Jah College of Engineering & Technology",
+    address: "Mount Pleasant, 8-2-249, Rd Number 3, Venkateshwara Hills, Banjara Hills, Hyderabad, Telangana 500082",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1354394901962!2d78.43579247493522!3d17.409995183481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9716fd9e81b3%3A0xcb1b51478c52086!2sMuffakham%20Jah%20College%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    image: "/scd/clg_location_pic.avif"
+  },
+  eventSpaces: [
+    { title: "Ghulam Ahmed Hall", label: "Main Stage", desc: "Headline keynotes and plenary sessions. The day opens and closes on this stage.", icon: "monitor" },
+    { title: "Seminar Hall", label: "Parallel Sessions", desc: "Panel discussions, lightning talks, and moderated conversations with industry guests.", icon: "users" },
+    { title: "AI Lab", label: "Hands-on Workshops", desc: "Roll-up-your-sleeves build sessions. Bring a laptop, leave having shipped something.", icon: "layout" }
+  ],
+  governingBody: [
+    { name: "Vahaj ur Rahman", image: "https://www.awsmjcet.in/images/profiles/vahaj.png" },
+    { name: "Zaid Ali Khan", image: "https://www.awsmjcet.in/images/profiles/zaid.jpg" },
+    { name: "Nahid Sami", image: "https://www.awsmjcet.in/images/profiles/nahid.jpg" },
+    { name: "Affah ullah shaik", image: "https://www.awsmjcet.in/images/profiles/afham.jpg" },
+    { name: "Sidra Aleem", image: "https://www.awsmjcet.in/images/profiles/sidra.jpg" },
+    { name: "Saad Riyan", image: "https://www.awsmjcet.in/images/profiles/saad.png" },
+    { name: "Musab Umayr", image: "https://www.awsmjcet.in/images/profiles/musab.jpg" },
+    { name: "Shaik Abrar", image: "https://www.awsmjcet.in/images/profiles/abrar.jpg" }
+  ],
+  socialLinks: {
+    meetup: "https://www.meetup.com/aws-sbg-mjcet/",
+    linkedin: "https://www.linkedin.com/company/aws-cloud-club-mjcet/",
+    instagram: "https://www.instagram.com/awsclub.mjcet/"
+  },
+  speakerFormUrl: "#"
 };

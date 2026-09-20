@@ -1,215 +1,356 @@
-import { useState } from "react";
-import { ArrowRight, CalendarDays, MapPin, Clock3, Check, ChevronDown, Linkedin, Instagram, Youtube, Phone, MessageCircle } from "lucide-react";
+import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin } from "lucide-react";
 import Navbar from "./components/Navbar";
-import Countdown, { PersistentCountdown } from "./components/Countdown";
-import Section from "./components/Section";
-import RegistrationForm from "./components/RegistrationForm";
+import { PersistentCountdown } from "./components/Countdown";
 import { eventData } from "./data/eventData";
 
-function App() {
-  const [faqOpen, setFaqOpen] = useState(0);
+const speakerFormatIcons = { mic: Mic, code: Code, zap: Zap, users: Users };
+const experienceIcons = { coffee: Coffee, package: Package, utensils: Utensils, gift: Gift, award: Award, users: Users, camera: Camera, wifi: Wifi };
+const spaceIcons = { monitor: Monitor, users: Users, layout: Layout };
 
+function SectionBadge({ icon: Icon, label }) {
   return (
-    <>
+    <div className="section-badge"><Icon size={16} /><span>{label}</span></div>
+  );
+}
+
+function App() {
+  return (
+    <div className="page-bg">
       <Navbar />
       <PersistentCountdown target={eventData.date} />
 
       <main>
-        <section className="hero">
-          <div className="hero-grid" />
-          <div className="container hero-content">
-            <div className="hero-copy">
-              <div className="pill"><span className="dot" /> AWS Cloud Community • Hyderabad</div>
-              <h1 className="hero-title">
-                <span className="aws-logo-text">aws</span>
-                <span className="title-student">STUDENT</span>
-                <span className="title-community">COMMUNITY DAY</span>
-                <span className="title-location">Hyderabad 2026</span>
-              </h1>
-              <p className="hero-tagline">{eventData.tagline}</p>
-              <div className="quick-facts">
-                <span><CalendarDays /> December 2026</span>
-                <span><Clock3 /> Full Day</span>
-                <span><MapPin /> {eventData.venue}</span>
+        {/* HERO */}
+        <section className="scd-section hero-section">
+          <div className="hero-glow-1" />
+          <div className="hero-glow-2" />
+          <div className="scd-container">
+            <div className="hero-inner">
+              <div className="hero-badge">AWS Student Builder Group MJCET Presents</div>
+              <h1 className="hero-title">Student <span className="gradient-text">Community</span><br />Day 2026</h1>
+              <p className="hero-desc">{eventData.tagline}</p>
+              <div style={{ paddingTop: 8 }}>
+                <a className="hero-cta" href={eventData.registrationUrl} target="_blank" rel="noopener noreferrer">
+                  <div className="cta-hover" /><span>Register Now</span><ArrowRight size={20} />
+                </a>
               </div>
-              <div className="hero-actions">
-                <a className="btn btn-orange btn-large" href={eventData.registrationUrl}>Register Now <ArrowRight /></a>
-                <a className="btn btn-ghost btn-large" href="#agenda">View Agenda</a>
-              </div>
-              <div className="social-proof"><span className="avatar-stack"><i/><i/><i/><i/></span> Join students, builders & cloud enthusiasts</div>
-            </div>
-
-            <div className="hero-card">
-              <p className="eyebrow">COUNTDOWN</p>
-              <h3>See you at Community Day</h3>
-              <Countdown target={eventData.date} />
-              <div className="aws-line"><span /> Powered by AWS SBG <span /></div>
             </div>
           </div>
         </section>
 
-        <Section id="about" eyebrow="ABOUT THE EVENT" title="One day. Real skills. A stronger cloud community.">
-          <div className="about-grid">
-            <div>
-              <p className="lead">AWS Student Community Day — Hyderabad is a student-focused cloud computing conference designed to bring learning, building and community together.</p>
-              <p>Explore AWS and modern cloud technologies through talks, practical workshops, networking and career-focused conversations. The page is structured so confirmed event content can be dropped in without changing the component architecture.</p>
-            </div>
-            <div className="stats-grid">
-              {eventData.stats.map(([label, value]) => <div className="stat" key={label}><strong>{value}</strong><span>{label}</span></div>)}
+        {/* ABOUT */}
+        <section id="about" className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="scd-container">
+            <div className="about-grid">
+              <div className="about-text">
+                <h2>About the Event</h2>
+                {eventData.about.paragraphs.map((p, i) => (
+                  <p key={i} dangerouslySetInnerHTML={{ __html: p.html }} />
+                ))}
+              </div>
+              <div className="about-image">
+                <img src={eventData.about.image} alt="About the Event" />
+                <div className="about-image-overlay" />
+              </div>
             </div>
           </div>
-        </Section>
+        </section>
 
-        <Section id="highlights" eyebrow="WHY ATTEND" title="Built for students who want to build.">
-          <div className="card-grid">
-            {eventData.highlights.map(([title, desc], i) => (
-              <article className="feature-card" key={title}><div className="icon-box"><Check /></div><h3>{title}</h3><p>{desc}</p><span className="card-index">0{i + 1}</span></article>
-            ))}
-          </div>
-        </Section>
-
-        <Section id="agenda" dark eyebrow="AGENDA" title="A day packed with learning and connection.">
-          <div className="agenda">
-            {eventData.agenda.map((item, i) => (
-              <article className="agenda-row" key={i}>
-                <time>{item.time}</time><div className="agenda-marker" />
-                <div className="agenda-main"><span className="tag">{item.type}</span><h3>{item.title}</h3><p>{item.description}</p>{item.speaker && <small>{item.speaker}</small>}</div>
-              </article>
-            ))}
-          </div>
-        </Section>
-
-        <Section id="speakers" eyebrow="SPEAKERS" title="Learn from people building in the real world.">
-          <div className="speakers-layout">
-            <div className="speakers-tba">
-              <div className="tba-icon"><Linkedin size={40}/></div>
-              <h3>Yet to be announced.</h3>
-              <p>Stay tuned for our exciting speaker lineup!</p>
+        {/* WHAT ARE SCDs */}
+        <section className="scd-section" style={{ padding: '80px 24px' }}>
+          <div className="scd-container" style={{ maxWidth: 1024, margin: '0 auto' }}>
+            <div className="scd-info-card">
+              <div className="glow-tl" /><div className="glow-br" />
+              <Quote className="quote-icon" />
+              <div className="scd-badge"><div className="dot" /><span>What are SCDs?</span></div>
+              <p dangerouslySetInnerHTML={{ __html: eventData.scdInfo.description }} />
+              <p className="sub-text" dangerouslySetInnerHTML={{ __html: eventData.scdInfo.subText }} />
             </div>
-            <div className="speaker-interest-box">
-              <h3>Share your expertise</h3>
-              <p>Passionate about cloud computing? Fill out our speaker interest form and join our amazing lineup!</p>
-              <a className="btn btn-orange btn-large" href="https://docs.google.com/forms/d/e/1FAIpQLSe9Z0-7fmtB5t7Cda5sGOsUkr-mHNUhIWF8b0ccj1bGmKcLAA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
-                Fill Speaker Interest Form <ArrowRight />
+          </div>
+        </section>
+
+        {/* CALL FOR SPEAKERS */}
+        <section className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="hero-glow-1" style={{ top: '25%', left: 'auto', right: '-80px' }} />
+          <div className="hero-glow-2" style={{ bottom: 0, right: 'auto', left: '-80px' }} />
+          <div className="scd-container" style={{ position: 'relative' }}>
+            <div className="text-center">
+              <SectionBadge icon={Mic} label="Call for Speakers" />
+              <h2 className="section-title">Got a story to tell?<br /><span className="gradient-text">Take the stage.</span></h2>
+              <p className="section-desc">We're looking for speakers, builders, and storytellers. Pick a format that fits you and share what you love with the community.</p>
+            </div>
+            <div className="experience-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: 1024, margin: '0 auto 56px' }}>
+              {eventData.speakerFormats.map((fmt) => {
+                const Icon = speakerFormatIcons[fmt.icon] || Mic;
+                return (
+                  <div key={fmt.title} className="glass-card">
+                    <div className="card-grid-bg" />
+                    <div className="glass-card-icon"><div className="icon-box"><Icon size={24} /></div><div className="icon-glow" /></div>
+                    <h3>{fmt.title}</h3><div className="divider" /><p>{fmt.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="text-center">
+              <a className="gradient-btn" href={eventData.speakerFormUrl}>
+                <div className="btn-bg" /><div className="btn-bg-hover" /><span>Submit a Speaker Proposal</span><ArrowRight size={20} />
               </a>
+              <p style={{ color: '#71717a', fontSize: 14, marginTop: 16 }}>All experience levels welcome · Applications reviewed on a rolling basis</p>
             </div>
           </div>
-        </Section>
+        </section>
 
-        <Section id="tracks" dark eyebrow="TRACKS & TOPICS" title="What you'll explore.">
-          <div className="tracks-grid">{eventData.tracks.map((track, i) => <div className="track" key={track}><span>0{i + 1}</span><strong>{track}</strong><ArrowRight /></div>)}</div>
-        </Section>
-
-        <Section id="community" eyebrow="THE COMMUNITY" title="Student-led. Hands-on. Career-focused.">
-          <div className="community-panel"><div className="community-logo">AWS<br/><b>SBG</b></div><div><p className="lead">Hosted by an AWS student community committed to practical learning, real-world projects and career preparation.</p><p>Replace this placeholder with the confirmed Hyderabad organizing community, institution details, mission and social links.</p><a className="text-link" href="#">Visit community page <ArrowRight /></a></div></div>
-        </Section>
-
-        <Section id="sponsors" dark eyebrow="SPONSORS & PARTNERS" title="Backed by the community.">
-          <div className="sponsor-groups">{eventData.sponsors.map(group => <div className="sponsor-group" key={group.tier}><p>{group.tier}</p><div>{group.names.map((name, i) => <div className="sponsor-logo" key={i}>{name}</div>)}</div></div>)}</div>
-        </Section>
-
-        <Section id="gallery" eyebrow="PROOF OF WORK" title="Moments from the community.">
-          <div className="gallery-grid">{[1,2,3,4,5,6].map(n => <div className="gallery-item" key={n}><span>Past event photo {n}</span></div>)}</div>
-        </Section>
-
-        <Section id="registration" dark eyebrow="REGISTRATION" title="Save your seat.">
-          <div className="stay-tuned">
-            <div className="stay-tuned-icon">
-              <ArrowRight size={32} />
+        {/* CALL FOR SPONSORS */}
+        <section className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="hero-glow-1" style={{ left: '-80px', right: 'auto' }} />
+          <div className="hero-glow-2" style={{ right: '-80px', left: 'auto' }} />
+          <div className="scd-container" style={{ position: 'relative' }}>
+            <div className="text-center">
+              <SectionBadge icon={Award} label="Call for Sponsors" />
+              <h2 className="section-title"><span className="gradient-text">Sponsor</span> the community.</h2>
+              <p className="section-desc">Put your brand in front of 800+ builders, future hires, and cloud-curious students across Telangana.</p>
             </div>
-            <h3>Stay Tuned!</h3>
-            <p>Registration is opening soon. Be the first to grab your seat!</p>
-          </div>
-        </Section>
-
-        <Section id="venue" eyebrow="VENUE" title="Find your way to the event.">
-          <div className="venue-grid">
-            <div className="map-embed">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.8!2d78.5078038!3d17.3579983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98686ae78299%3A0xb15620bbd3e6bec!2sMatrusri%20Engineering%20College!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
-                width="100%" 
-                height="400" 
-                style={{border:0, borderRadius:'10px'}} 
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Matrusri Engineering College"
-              />
+            <div style={{ display: 'grid', gap: 24, maxWidth: 1024, margin: '0 auto 48px' }}>
+              <div className="sponsor-benefit-card">
+                <div className="card-grid-bg" style={{ opacity: .025 }} />
+                <div className="card-header">
+                  <div><div style={{ width: 56, height: 56, borderRadius: 16, background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,.7)' }}><Mic size={24} /></div></div>
+                  <span className="card-num">01</span>
+                </div>
+                <h3>Brand Awareness</h3><div className="accent-line" />
+                <ul>
+                  <li><Check size={16} /><span><span className="hl">Feature</span> your brand across reels, posts, and stories curated by our media team.</span></li>
+                  <li><Check size={16} /><span><span className="hl">Publish</span> your company on the official SCD website.</span></li>
+                  <li><Check size={16} /><span><span className="hl">Expose</span> your brand on flyers, posters, banners, t-shirts, and digital signage.</span></li>
+                  <li><Check size={16} /><span><span className="hl">Introduce</span> your brand to all attendees at the opening ceremony.</span></li>
+                </ul>
+              </div>
+              <div className="sponsor-benefit-card">
+                <div className="card-grid-bg" style={{ opacity: .025 }} />
+                <div className="card-header">
+                  <div><div style={{ width: 56, height: 56, borderRadius: 16, background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,.7)' }}><Users size={24} /></div></div>
+                  <span className="card-num">02</span>
+                </div>
+                <h3>Audience Interaction</h3><div className="accent-line" />
+                <ul>
+                  <li><Check size={16} /><span><span className="hl">Meet</span> a talented, motivated audience from diverse technical backgrounds across Telangana.</span></li>
+                  <li><Check size={16} /><span><span className="hl">Interact</span> with 800+ participants to share and promote your services and solutions.</span></li>
+                  <li><Check size={16} /><span><span className="hl">Choose</span> top talent proficient in DevOps, AI, and cloud for internships and recruitment.</span></li>
+                  <li><Check size={16} /><span><span className="hl">Highlight</span> your services with a dedicated BOOTH setup in the hall.</span></li>
+                </ul>
+              </div>
             </div>
-            <div className="venue-info">
-              <h3>{eventData.venue}</h3>
-              <p>Join us at Matrusri Engineering College in Hyderabad. Click below for directions and parking information.</p>
-              <a className="btn btn-orange" href="https://maps.app.goo.gl/wq2wSZ6HacUkY71W9" target="_blank" rel="noopener noreferrer">
-                <MapPin size={16} /> Get Directions
-              </a>
+            <div className="text-center">
+              <a className="gradient-btn" href="#"><div className="btn-bg" /><div className="btn-bg-hover" /><span>Become a Sponsor</span><ArrowRight size={20} /></a>
+              <p style={{ color: '#71717a', fontSize: 14, marginTop: 16 }}>Share a few quick details and our team will follow up with the full sponsorship deck</p>
             </div>
           </div>
-        </Section>
+        </section>
 
-        <Section id="faq" dark eyebrow="FAQ" title="Questions, answered.">
-          <div className="faq">{eventData.faqs.map(([q, a], i) => <div className={`faq-item ${faqOpen === i ? "active" : ""}`} key={q}><button onClick={() => setFaqOpen(faqOpen === i ? -1 : i)}><span>{q}</span><ChevronDown /></button>{faqOpen === i && <p>{a}</p>}</div>)}</div>
-        </Section>
-
-        <Section id="team" eyebrow="ORGANIZING TEAM" title="Meet the people making it happen.">
-          <div className="team-grid">{["Cloud Captain", "Lead Organizer", "Community Lead", "Operations"].map(role => <div className="team-card" key={role}><div className="team-avatar">TBA</div><strong>Team Member</strong><span>{role}</span></div>)}</div>
-        </Section>
-
-        <section className="help-section">
-          <div className="help-glow" />
-          <div className="container help-content">
-            <div className="help-badge">
-              <Phone size={20} />
-              <span>NEED HELP?</span>
+        {/* EXPERIENCE */}
+        <section className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="scd-container">
+            <div className="text-center">
+              <span style={{ color: '#a78bfa', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 16, display: 'block' }}>The Full Experience</span>
+              <h2 className="section-title">Beyond the Sessions</h2>
+              <p className="section-desc">Your ticket unlocks more than talks. Here's everything we're packing into the day.</p>
             </div>
-            <h2 className="help-title">We're here for you</h2>
-            <p className="help-subtitle">Got questions? Reach out to our team directly.</p>
-            
-            <div className="help-cards">
-              <a href="tel:+919100208586" className="help-card">
-                <div className="help-card-glow" />
-                <div className="help-avatar">SH</div>
-                <h3>Siddhardha</h3>
-                <p>Event Coordinator</p>
-                <div className="help-phone">
-                  <Phone size={16} />
-                  <span>91002 08586</span>
-                </div>
-                <div className="help-action">
-                  <MessageCircle size={16} />
-                  <span>Tap to Call</span>
-                </div>
-              </a>
+            <div className="experience-grid" style={{ maxWidth: 1024, margin: '0 auto' }}>
+              {eventData.experienceItems.map((item) => {
+                const Icon = experienceIcons[item.icon] || Coffee;
+                return <div key={item.title} className="experience-card"><div className="exp-icon"><Icon size={24} /></div><h4>{item.title}</h4><p>{item.desc}</p></div>;
+              })}
+            </div>
+            <p style={{ color: '#71717a', fontSize: 14, marginTop: 40, maxWidth: 560, margin: '40px auto 0', textAlign: 'center' }}>… and a few surprises we're saving for the day itself.</p>
+          </div>
+        </section>
 
-              <a href="tel:+919492045240" className="help-card">
-                <div className="help-card-glow" />
-                <div className="help-avatar">BV</div>
-                <h3>Bavana</h3>
-                <p>Support Lead</p>
-                <div className="help-phone">
-                  <Phone size={16} />
-                  <span>94920 45240</span>
+        {/* PRICING */}
+        <section className="scd-section">
+          <div className="scd-container">
+            <div className="text-center"><h2 className="section-title">Tickets & Pricing</h2><p className="section-desc">Pick the pass that fits you — one all-access ticket to everything we're packing into Student Community Day.</p></div>
+            <div className="pricing-grid">
+              <div className="pricing-card solo"><div className="card-inner">
+                <span className="tier">Solo</span><h3>Individual Pass</h3>
+                <div className="price"><span className="amount">{eventData.pricing.solo.price}</span><span className="per">{eventData.pricing.solo.per}</span></div>
+                <ul className="features">{eventData.pricing.solo.features.map((f) => <li key={f}><div className="check"><Check size={12} /></div>{f}</li>)}</ul>
+                <button className="buy-btn">Get Individual Pass</button>
+              </div></div>
+              <div className="pricing-card squad"><div className="popular-tag">POPULAR</div><div className="card-inner">
+                <span className="tier">Squad</span><h3>Group Pass (4 People)</h3>
+                <div className="price"><span className="amount">{eventData.pricing.squad.price}</span><span className="per">{eventData.pricing.squad.per}</span></div>
+                <ul className="features">{eventData.pricing.squad.features.map((f) => <li key={f}><div className="check"><Check size={12} /></div>{f}</li>)}</ul>
+                <button className="buy-btn">Get Group Pass</button>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        {/* SPEAKERS */}
+        <section id="speakers" className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)', borderBottom: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="scd-container">
+            <div className="text-center">
+              <SectionBadge icon={Mic} label="Masterclass Speakers" />
+              <h2 className="section-title">Learn from the <span className="gradient-text">best minds</span> in cloud & AI</h2>
+              <p className="section-desc">Industry leaders, AWS ambassadors, and builders who are shaping the future.</p>
+            </div>
+            <div className="speakers-grid" style={{ maxWidth: 1024, margin: '0 auto' }}>
+              {eventData.speakers.map((s) => (
+                <div key={s.name} className="speaker-card">
+                  <div className="blob-container">
+                    <div className="blob-blob" style={{ width: s.blobWidth, height: s.blobHeight, top: s.blobTop, left: s.blobLeft, transform: 'translate(-50%, 0)', borderRadius: s.blobRadius, background: s.blobGradient }} />
+                    <div className="speaker-img-wrap" style={{ width: 180, height: 220, borderRadius: s.blobRadius }}>
+                      <img src={s.image} alt={s.name} />
+                      <div className="img-gradient" />
+                    </div>
+                  </div>
+                  <div className="speaker-info">
+                    <div className="speaker-divider" />
+                    <h3>{s.name}</h3>
+                    <p className="role">{s.role}</p>
+                    <p className="credential">{s.credential}</p>
+                    <p className="ambassador">{s.ambassador}</p>
+                    <div className="topic-box">
+                      <div className="topic-header"><Mic size={16} /><div><span className="topic-label">Topic</span><p>{s.topic}</p></div></div>
+                    </div>
+                  </div>
                 </div>
-                <div className="help-action">
-                  <MessageCircle size={16} />
-                  <span>Tap to Call</span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* COMMUNITY PARTNERS */}
+        <section className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="scd-container">
+            <div className="text-center">
+              <h2 className="section-title">Community <span className="gradient-text">partners</span></h2>
+              <p className="section-desc">Student communities and organizations powering the movement alongside us.</p>
+            </div>
+            <div className="partner-grid">
+              {eventData.communityPartners.map((p) => (
+                <div key={p.name} className="partner-card">
+                  <div className="partner-content"><img src={p.logo} alt={p.name} /><span className="partner-name">{p.name}</span></div>
                 </div>
-              </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SPONSORS */}
+        <section id="sponsors" className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="scd-container">
+            <div className="text-center"><h2 className="section-title">Our Partners & Sponsors</h2><p className="section-desc">Backed by the best in the industry to bring this experience to you.</p></div>
+            <div className="sponsor-logo-grid" style={{ maxWidth: 1024, margin: '0 auto' }}>
+              {eventData.sponsors.map((s, i) => (
+                <div key={i} className="sponsor-logo-card">
+                  {s.tba ? <div className="tba-overlay"><span>TBA</span></div> : <img src={s.logo} alt={s.name} />}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* VENUE */}
+        <section id="venue" className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="scd-container">
+            <div className="text-center"><h2 className="section-title">Venue & Location</h2><p className="section-desc">Join us at the heart of Hyderabad for an unforgettable experience.</p></div>
+            <div className="venue-grid">
+              <div className="venue-image">
+                <img src={eventData.venueDetails.image} alt={eventData.venueDetails.college} />
+                <div className="venue-overlay" />
+                <div className="venue-badge">
+                  <div className="badge-pill"><MapPin size={16} color="#a78bfa" /><span>Main Campus</span></div>
+                  <h3>{eventData.venueDetails.college}</h3>
+                </div>
+              </div>
+              <div className="venue-map-container">
+                <iframe src={eventData.venueDetails.mapEmbed} width="100%" height="100%" style={{ border: 0, minHeight: 250 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Venue Map" />
+                <div className="venue-address">
+                  <div className="pin"><MapPin size={20} /></div>
+                  <div><h4>Getting Here</h4><p>{eventData.venueDetails.address}</p></div>
+                </div>
+              </div>
             </div>
 
-            <p className="help-note">Available 9 AM — 6 PM IST</p>
+            {/* EVENT SPACES */}
+            <div style={{ marginTop: 80 }}>
+              <div className="text-center" style={{ marginBottom: 48 }}>
+                <span style={{ color: '#a78bfa', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.1em', display: 'block', marginBottom: 12 }}>On The Day</span>
+                <h3 style={{ fontSize: 'clamp(24px, 4vw, 36px)', fontWeight: 700, marginBottom: 12 }}>Event Spaces</h3>
+                <p style={{ color: '#a1a1aa', maxWidth: 560, margin: '0 auto' }}>Three rooms across campus, each tuned to the kind of session inside.</p>
+              </div>
+              <div className="spaces-grid">
+                {eventData.eventSpaces.map((space, i) => {
+                  const Icon = spaceIcons[space.icon] || Monitor;
+                  return (
+                    <div key={space.title} className="space-card">
+                      <div className="card-head">
+                        <div className="space-icon"><Icon size={20} /></div>
+                        <span className="space-num">0{i + 1}</span>
+                      </div>
+                      <h4>{space.title}</h4>
+                      <div className="space-label-row"><span className="space-label">{space.label}</span><span className="space-label-line" /></div>
+                      <p>{space.desc}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="footer">
-        <div className="container footer-grid">
-          <div><div className="brand"><span className="aws-mark">aws</span><span>Student Community Day</span></div><p>A student-led cloud computing conference.</p></div>
-          <div><h4>Explore</h4>{eventData.nav.map(([id, label]) => <a href={`#${id}`} key={id}>{label}</a>)}</div>
-          <div><h4>Connect</h4><div className="socials"><a href="#"><Instagram/></a><a href="#"><Linkedin/></a><a href="#"><Youtube/></a></div><a href="mailto:hello@example.com">hello@example.com</a></div>
+      {/* FOOTER */}
+      <footer className="site-footer">
+        <div className="grid-bg" />
+        <div className="footer-top-line" />
+        <div className="footer-inner">
+          <div className="footer-grid">
+            <div className="footer-brand">
+              <div><h2>AWS Community</h2><div className="brand-underline" /></div>
+              <p>Empowering developers to build, learn, and grow with AWS technologies through community events, workshops, and shared knowledge.</p>
+              <div className="footer-socials">
+                <a href={eventData.socialLinks.meetup} target="_blank" rel="noopener noreferrer">M</a>
+                <a href={eventData.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">in</a>
+                <a href={eventData.socialLinks.instagram} target="_blank" rel="noopener noreferrer">I</a>
+              </div>
+            </div>
+            <div className="footer-links-grid">
+              <div className="footer-links">
+                <h3>About</h3>
+                <a href={eventData.socialLinks.meetup}>Our Mission</a>
+                <a href={eventData.socialLinks.meetup}>Team</a>
+                <a href={eventData.socialLinks.meetup}>Partners</a>
+              </div>
+              <div className="footer-links">
+                <h3>Resources</h3>
+                <a href={eventData.socialLinks.meetup}>Documentation</a>
+                <a href={eventData.socialLinks.meetup}>Blog</a>
+                <a href={eventData.socialLinks.meetup}>Events</a>
+              </div>
+              <div className="footer-links">
+                <h3>Community</h3>
+                <a href={eventData.socialLinks.meetup}>Discord</a>
+                <a href={eventData.socialLinks.meetup}>Forums</a>
+                <a href={eventData.socialLinks.meetup}>Meetups</a>
+              </div>
+            </div>
+          </div>
+          <div className="footer-governing">
+            <span className="gov-label">Governing Body</span>
+            <div className="avatars">
+              {eventData.governingBody.map((m) => (
+                <a key={m.name} href="#"><img src={m.image} alt={m.name} /></a>
+              ))}
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p>© 2026 AWS Student Builder Group Mjcet. All rights reserved.</p>
+          </div>
         </div>
-        <div className="container footer-bottom"><span>© 2026 AWS Student Community Day — Hyderabad</span><span>Code of Conduct • Powered by AWS SBG</span></div>
       </footer>
-    </>
+    </div>
   );
 }
 
