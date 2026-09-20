@@ -1,11 +1,11 @@
 export const eventData = {
   name: "AWS Student Community Day",
-  location: "MJCET",
+  location: "mecs",
   year: "2026",
   tagline: "A premier conference led by students, for students. Dive into the world of AWS, connect with industry leaders, and accelerate your cloud computing journey.",
   date: "2026-06-10T09:00:00+05:30",
-  venue: "Muffakham Jah College of Engineering & Technology",
-  venueShort: "MJCET",
+  venue: "Matrusri Engineering College",
+  venueShort: "mecs",
   registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeFZHIXnUFz46NuwibriOUkL7rEjk-PQetA8X0z2o9TCQK4pA/viewform",
   registrationGroupUrl: "#",
   nav: [
@@ -16,7 +16,7 @@ export const eventData = {
   ],
   about: {
     paragraphs: [
-      { html: '<span class="highlight">AWS Student Builder Group MJCET</span> is a dynamic, student-led community supported by <span class="highlight">Amazon Web Services (AWS)</span>. The AWS Student Community Day at MJCET will be held in <span class="highlight">10th June 2026</span>. Our mission is to empower students with the right skills, tools, and opportunities to explore the cloud, build innovative solutions, and collaborate with peers and industry leaders. We regularly host technical workshops, hackathons, and mentorship sessions to help students transform ideas into impactful projects.' },
+      { html: '<span class="highlight">AWS Student Builder Group mecs</span> is a dynamic, student-led community supported by <span class="highlight">Amazon Web Services (AWS)</span>. The AWS Student Community Day at mecs will be held in <span class="highlight">10th June 2026</span>. Our mission is to empower students with the right skills, tools, and opportunities to explore the cloud, build innovative solutions, and collaborate with peers and industry leaders. We regularly host technical workshops, hackathons, and mentorship sessions to help students transform ideas into impactful projects.' },
       { html: 'The <span class="highlight">AWS Student Community Day (SCD)</span> is the flagship annual event of the AWS Student Builder Group. It is a one-day, <span class="highlight">student-driven conference</span> designed to celebrate technology, innovation, and collaboration. Organized entirely by student leaders with guidance from AWS, SCD brings together cloud enthusiasts, developers, and industry experts to share knowledge, showcase real-world use cases, and inspire the next generation of builders.' }
     ],
     image: "/scd/About_the_Event_pic.jpeg"
@@ -92,9 +92,9 @@ export const eventData = {
     { name: "TBA", tba: true }
   ],
   venueDetails: {
-    college: "Muffakham Jah College of Engineering & Technology",
-    address: "Mount Pleasant, 8-2-249, Rd Number 3, Venkateshwara Hills, Banjara Hills, Hyderabad, Telangana 500082",
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1354394901962!2d78.43579247493522!3d17.409995183481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9716fd9e81b3%3A0xcb1b51478c52086!2sMuffakham%20Jah%20College%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    college: "Matrusri Engineering College",
+    address: "Saidabad, Hyderabad, Telangana",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.1190525981624!2d78.5052289!3d17.3580034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98686ae78299%3A0xb15620bbd3e6bec!2sMatrusri%20Engineering%20College!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
     image: "/scd/clg_location_pic.avif"
   },
   eventSpaces: [
@@ -113,9 +113,9 @@ export const eventData = {
     { name: "Shaik Abrar", image: "https://www.awsmjcet.in/images/profiles/abrar.jpg" }
   ],
   socialLinks: {
-    meetup: "https://www.meetup.com/aws-sbg-mjcet/",
-    linkedin: "https://www.linkedin.com/company/aws-cloud-club-mjcet/",
-    instagram: "https://www.instagram.com/awsclub.mjcet/"
+    meetup: "https://www.meetup.com/aws-sbg-mecs/",
+    linkedin: "https://www.linkedin.com/company/aws-cloud-club-mecs/",
+    instagram: "https://www.instagram.com/awsclub.mecs/"
   },
   speakerFormUrl: "#"
 };

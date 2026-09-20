@@ -9,7 +9,7 @@ export default function Navbar() {
     <>
       {/* Desktop floating nav */}
       <div className="floating-nav">
-        <a className="nav-link" href="https://www.awsmjcet.in/">Home</a>
+        <a className="nav-link" href="https://www.awsmecs.in/">Home</a>
         <a className="neon-btn-wrapper" href={eventData.registrationUrl}>
           <div className="neon-btn-glow" />
           <div className="neon-btn-inner">SCD</div>

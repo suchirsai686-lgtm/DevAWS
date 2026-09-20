@@ -26,7 +26,7 @@ function App() {
           <div className="hero-glow-2" />
           <div className="scd-container">
             <div className="hero-inner">
-              <div className="hero-badge">AWS Student Builder Group MJCET Presents</div>
+              <div className="hero-badge">AWS Student Builder Group mecs Presents</div>
               <h1 className="hero-title">Student <span className="gradient-text">Community</span><br />Day 2026</h1>
               <p className="hero-desc">{eventData.tagline}</p>
               <div style={{ paddingTop: 8 }}>
@@ -346,7 +346,7 @@ function App() {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>© 2026 AWS Student Builder Group Mjcet. All rights reserved.</p>
+            <p>© 2026 AWS Student Builder Group mecs. All rights reserved.</p>
           </div>
         </div>
       </footer>
