@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin } from "lucide-react";
+import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin, Phone } from "lucide-react";
 import Navbar from "./components/Navbar";
 import { PersistentCountdown } from "./components/Countdown";
 import { eventData } from "./data/eventData";
@@ -92,7 +92,7 @@ function App() {
               })}
             </div>
             <div className="text-center">
-              <a className="gradient-btn" href={eventData.speakerFormUrl}>
+              <a className="gradient-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe9Z0-7fmtB5t7Cda5sGOsUkr-mHNUhIWF8b0ccj1bGmKcLAA/viewform?usp=header" target="_blank" rel="noopener noreferrer">
                 <div className="btn-bg" /><div className="btn-bg-hover" /><span>Submit a Speaker Proposal</span><ArrowRight size={20} />
               </a>
               <p style={{ color: '#71717a', fontSize: 14, marginTop: 16 }}>All experience levels welcome · Applications reviewed on a rolling basis</p>
@@ -295,6 +295,38 @@ function App() {
                     </div>
                   );
                 })}
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* HELP */}
+        <section className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="scd-container">
+            <div className="text-center">
+              <SectionBadge icon={Phone} label="Need Help?" />
+              <h2 className="section-title">We're here to help</h2>
+              <p className="section-desc">Got questions about registration, directions, or anything else? Reach out to us.</p>
+            </div>
+            <div className="experience-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: 640, margin: '0 auto' }}>
+              <div className="glass-card">
+                <div className="card-grid-bg" />
+                <div className="glass-card-icon">
+                  <div className="icon-box"><Phone size={24} /></div>
+                  <div className="icon-glow" />
+                </div>
+                <h3>Siddhardha</h3>
+                <div className="divider" />
+                <a href="tel:9100208586" style={{ color: '#a78bfa', fontSize: 18, fontWeight: 600, textDecoration: 'none' }}>9100208586</a>
+              </div>
+              <div className="glass-card">
+                <div className="card-grid-bg" />
+                <div className="glass-card-icon">
+                  <div className="icon-box"><Phone size={24} /></div>
+                  <div className="icon-glow" />
+                </div>
+                <h3>Bavana</h3>
+                <div className="divider" />
+                <a href="tel:9492045240" style={{ color: '#a78bfa', fontSize: 18, fontWeight: 600, textDecoration: 'none' }}>9492045240</a>
               </div>
             </div>
           </div>
