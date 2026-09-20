@@ -1,4 +1,5 @@
 import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin, Phone } from "lucide-react";
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import { PersistentCountdown } from "./components/Countdown";
 import { eventData } from "./data/eventData";
@@ -14,6 +15,8 @@ function SectionBadge({ icon: Icon, label }) {
 }
 
 function App() {
+  const [showComingSoon, setShowComingSoon] = useState(false);
+
   return (
     <div className="page-bg">
       <Navbar />
@@ -30,9 +33,9 @@ function App() {
               <h1 className="hero-title">Student <span className="gradient-text">Community</span><br />Day 2026</h1>
               <p className="hero-desc">{eventData.tagline}</p>
               <div style={{ paddingTop: 8 }}>
-                <a className="hero-cta" href={eventData.registrationUrl} target="_blank" rel="noopener noreferrer">
+                <button className="hero-cta" onClick={() => setShowComingSoon(true)} type="button">
                   <div className="cta-hover" /><span>Register Now</span><ArrowRight size={20} />
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -141,7 +144,7 @@ function App() {
               </div>
             </div>
             <div className="text-center">
-              <a className="gradient-btn" href="#"><div className="btn-bg" /><div className="btn-bg-hover" /><span>Become a Sponsor</span><ArrowRight size={20} /></a>
+              <a className="gradient-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfcUjvg0TKfsh-xuB3USrnTiD24vVCnwgJWUqzr7UENCBvEnw/viewform?usp=header" target="_blank" rel="noopener noreferrer"><div className="btn-bg" /><div className="btn-bg-hover" /><span>Become a Sponsor</span><ArrowRight size={20} /></a>
               <p style={{ color: '#71717a', fontSize: 14, marginTop: 16 }}>Share a few quick details and our team will follow up with the full sponsorship deck</p>
             </div>
           </div>
@@ -335,6 +338,18 @@ function App() {
           </div>
         </section>
       </main>
+
+      {/* COMING SOON POPUP */}
+      {showComingSoon && (
+        <div onClick={() => setShowComingSoon(false)} style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,.7)', backdropFilter: 'blur(8px)' }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ background: 'rgba(24,24,27,.95)', border: '1px solid rgba(139,92,246,.3)', borderRadius: 20, padding: '48px 40px', maxWidth: 400, textAlign: 'center', position: 'relative', boxShadow: '0 0 60px rgba(139,92,246,.15)' }}>
+            <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(139,92,246,.2), rgba(217,70,239,.15))', border: '1px solid rgba(139,92,246,.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: 28 }}>🚀</div>
+            <h3 style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>Coming Soon</h3>
+            <p style={{ color: '#a1a1aa', fontSize: 14, lineHeight: 1.6, marginBottom: 24 }}>Registration will open shortly. Stay tuned for updates!</p>
+            <button onClick={() => setShowComingSoon(false)} style={{ padding: '10px 32px', borderRadius: 12, background: 'linear-gradient(135deg, #8b5cf6, #d946ef)', border: 'none', color: '#fff', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>Got it</button>
+          </div>
+        </div>
+      )}
 
       {/* FOOTER */}
       <footer className="site-footer">
