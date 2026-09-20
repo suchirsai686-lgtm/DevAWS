@@ -11,12 +11,17 @@ function getRemaining(target) {
   };
 }
 
-export default function Countdown({ target }) {
+export function useCountdown(target) {
   const [time, setTime] = useState(() => getRemaining(target));
   useEffect(() => {
     const id = setInterval(() => setTime(getRemaining(target)), 1000);
     return () => clearInterval(id);
   }, [target]);
+  return time;
+}
+
+export default function Countdown({ target }) {
+  const time = useCountdown(target);
 
   if (time.done) return <div className="countdown-done">The event is live / has passed.</div>;
 
@@ -28,6 +33,35 @@ export default function Countdown({ target }) {
           <span>{key}</span>
         </div>
       ))}
+    </div>
+  );
+}
+
+export function PersistentCountdown({ target }) {
+  const time = useCountdown(target);
+
+  useEffect(() => {
+    if (!time.done) {
+      document.body.classList.add("has-persistent-countdown");
+    }
+    return () => document.body.classList.remove("has-persistent-countdown");
+  }, [time.done]);
+
+  if (time.done) return null;
+
+  return (
+    <div className="persistent-countdown">
+      <div className="persistent-countdown-inner">
+        <span className="persistent-countdown-label">Event in</span>
+        <div className="persistent-countdown-cells">
+          {Object.entries(time).filter(([key]) => key !== "done").map(([key, value]) => (
+            <div className="persistent-countdown-cell" key={key}>
+              <strong>{String(value).padStart(2, "0")}</strong>
+              <span>{key}</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
