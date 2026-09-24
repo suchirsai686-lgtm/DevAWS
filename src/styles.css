@@ -415,8 +415,8 @@ ul { list-style: none; }
 .pricing-card.squad .buy-btn:hover { background: #7c3aed; }
 
 /* ======================== SPEAKER CARDS ======================== */
-.speakers-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-@media (min-width: 768px) { .speakers-grid { grid-template-columns: repeat(3, 1fr); } }
+.speakers-grid { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+.speakers-grid > * { flex: 1 1 300px; max-width: 340px; }
 .speaker-card {
   position: relative; border-radius: 2rem; overflow: hidden;
   backdrop-filter: blur(24px);

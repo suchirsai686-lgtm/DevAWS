@@ -53,28 +53,6 @@ export const eventData = {
       blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
       blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
       blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
-    },
-    {
-      name: "Tajamul Khan",
-      role: "Senior Data Scientist @ Eastman",
-      credential: "Ex - Google, Amazon | MITian",
-      ambassador: "Top 1% Data Scientist (Worldwide)",
-      topic: "Entering the Top 1%: Building a FAANG-Ready Skillset in AI & Data Science",
-      image: "https://www.awsmjcet.in/scd/speakers/Tajamul_khan.png",
-      blobRadius: "55% 45% 60% 40% / 40% 55% 45% 60%",
-      blobGradient: "linear-gradient(135deg, rgba(99,102,241,.16), rgba(139,92,246,.1))",
-      blobWidth: "70%", blobHeight: "85%", blobTop: "-2%", blobLeft: "45%"
-    },
-    {
-      name: "Avinash Reddy Thipparthi",
-      role: "Founder, Aviz Academy",
-      credential: "AWS Community Builder (3x) | Docker Captain",
-      ambassador: "Cloud & DevOps Architect | 14+ Years | 50,000+ Learners",
-      topic: "AI Agents are the new apps: How AWS and AI are renewing software in 2026",
-      image: "https://www.awsmjcet.in/scd/speakers/Avinash_Reddy_Thipparthi.png",
-      blobRadius: "45% 55% 40% 60% / 60% 45% 55% 40%",
-      blobGradient: "linear-gradient(135deg, rgba(168,85,247,.17), rgba(139,92,246,.11))",
-      blobWidth: "65%", blobHeight: "75%", blobTop: "5%", blobLeft: "48%"
     }
   ],
   communityPartners: [

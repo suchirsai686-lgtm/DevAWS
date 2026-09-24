@@ -1,5 +1,4 @@
 import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
 import Navbar from "./components/Navbar";
 import { PersistentCountdown } from "./components/Countdown";
 import { eventData } from "./data/eventData";
@@ -15,8 +14,6 @@ function SectionBadge({ icon: Icon, label }) {
 }
 
 function App() {
-  const [showComingSoon, setShowComingSoon] = useState(false);
-
   return (
     <div className="page-bg">
       <Navbar />
@@ -33,9 +30,9 @@ function App() {
               <h1 className="hero-title">Student <span className="gradient-text">Community</span><br />Day 2026 Hyderabad</h1>
               <p className="hero-desc">{eventData.tagline}</p>
               <div style={{ paddingTop: 8 }}>
-                <button className="hero-cta" onClick={() => setShowComingSoon(true)} type="button">
+                <a className="hero-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfpMUhrU3QF7n1sLbGIxZPGuQoHT6A8jGOhQe184kl4Bcx9nA/viewform" target="_blank" rel="noopener noreferrer">
                   <div className="cta-hover" /><span>Register Now</span><ArrowRight size={20} />
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -171,7 +168,7 @@ function App() {
         {/* PRICING */}
         <section className="scd-section">
           <div className="scd-container">
-            <div className="text-center"><h2 className="section-title">Tickets & Pricing</h2><p className="section-desc">Pick the pass that fits you — one all-access ticket to everything we're packing into Student Community Day.</p><div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 12, padding: '8px 20px', borderRadius: 999, background: 'linear-gradient(135deg, rgba(139,92,246,.15), rgba(217,70,239,.1))', border: '1px solid rgba(139,92,246,.25)', color: '#c084fc', fontSize: 13, fontWeight: 600, letterSpacing: '.03em' }}><Gift size={16} /><span>Early Bird Offer</span></div></div>
+            <div className="text-center"><h2 className="section-title">Tickets & Pricing</h2><p className="section-desc">Pick the pass that fits you — one all-access ticket to everything we're packing into Student Community Day.</p><div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, margin: '0 0 64px', padding: '8px 20px', borderRadius: 999, background: 'linear-gradient(135deg, rgba(139,92,246,.15), rgba(217,70,239,.1))', border: '1px solid rgba(139,92,246,.25)', color: '#c084fc', fontSize: 13, fontWeight: 600, letterSpacing: '.03em' }}><Gift size={16} /><span>Early Bird Offer</span></div></div>
             <div className="pricing-grid">
               <div className="pricing-card solo"><div className="card-inner">
                 <span className="tier">Solo</span><h3>Individual Pass</h3>
@@ -338,18 +335,6 @@ function App() {
           </div>
         </section>
       </main>
-
-      {/* COMING SOON POPUP */}
-      {showComingSoon && (
-        <div onClick={() => setShowComingSoon(false)} style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,.7)', backdropFilter: 'blur(8px)' }}>
-          <div onClick={(e) => e.stopPropagation()} style={{ background: 'rgba(24,24,27,.95)', border: '1px solid rgba(139,92,246,.3)', borderRadius: 20, padding: '48px 40px', maxWidth: 400, textAlign: 'center', position: 'relative', boxShadow: '0 0 60px rgba(139,92,246,.15)' }}>
-            <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(139,92,246,.2), rgba(217,70,239,.15))', border: '1px solid rgba(139,92,246,.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: 28 }}>🚀</div>
-            <h3 style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>Coming Soon</h3>
-            <p style={{ color: '#a1a1aa', fontSize: 14, lineHeight: 1.6, marginBottom: 24 }}>Registration will open shortly. Stay tuned for updates!</p>
-            <button onClick={() => setShowComingSoon(false)} style={{ padding: '10px 32px', borderRadius: 12, background: 'linear-gradient(135deg, #8b5cf6, #d946ef)', border: 'none', color: '#fff', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>Got it</button>
-          </div>
-        </div>
-      )}
 
       {/* FOOTER */}
       <footer className="site-footer">
