@@ -318,6 +318,7 @@ function App() {
                   <div className="icon-glow" />
                 </div>
                 <h3>Siddhardha</h3>
+                <p style={{ marginBottom: 12 }}>Sample Text</p>
                 <div className="divider" />
                 <a href="tel:9100208586" style={{ color: '#a78bfa', fontSize: 18, fontWeight: 600, textDecoration: 'none' }}>9100208586</a>
               </div>
@@ -328,6 +329,7 @@ function App() {
                   <div className="icon-glow" />
                 </div>
                 <h3>Bavana</h3>
+                <p style={{ marginBottom: 12 }}>Sample Text</p>
                 <div className="divider" />
                 <a href="tel:9492045240" style={{ color: '#a78bfa', fontSize: 18, fontWeight: 600, textDecoration: 'none' }}>9492045240</a>
               </div>

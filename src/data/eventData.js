@@ -59,10 +59,7 @@ export const eventData = {
     { name: "DevCatalyst", logo: "" }
   ],
   sponsors: [
-    { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
-    { name: "TBA", tba: true },
-    { name: "TBA", tba: true },
-    { name: "TBA", tba: true }
+    { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" }
   ],
   venueDetails: {
     college: "Matrusri Engineering College",
