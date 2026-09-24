@@ -30,7 +30,7 @@ function App() {
           <div className="scd-container">
             <div className="hero-inner">
               <div className="hero-badge">AWS Student Builder Group mecs Presents</div>
-              <h1 className="hero-title">Student <span className="gradient-text">Community</span><br />Day 2026</h1>
+              <h1 className="hero-title">Student <span className="gradient-text">Community</span><br />Day 2026 Hyderabad</h1>
               <p className="hero-desc">{eventData.tagline}</p>
               <div style={{ paddingTop: 8 }}>
                 <button className="hero-cta" onClick={() => setShowComingSoon(true)} type="button">
@@ -290,7 +290,7 @@ function App() {
                 {eventData.eventSpaces.map((space, i) => {
                   const Icon = spaceIcons[space.icon] || Monitor;
                   return (
-                    <div key={space.title} className="space-card">
+                    <div key={space.label} className="space-card">
                       <div className="card-head">
                         <div className="space-icon"><Icon size={20} /></div>
                         <span className="space-num">0{i + 1}</span>

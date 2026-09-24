@@ -32,7 +32,7 @@ ul { list-style: none; }
 
 /* ======================== FLOATING NAV ======================== */
 .floating-nav {
-  position: fixed; inset-x: 0; top: 12px; z-index: 5000;
+  position: fixed; left: 0; right: 0; top: 12px; z-index: 5000;
   display: none;
   max-width: fit-content; margin: 0 auto;
   border: 1px solid rgba(255,255,255,.12); border-radius: 9999px;

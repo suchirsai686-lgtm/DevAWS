@@ -3,7 +3,7 @@ export const eventData = {
   location: "mecs",
   year: "2026",
   tagline: "A premier conference led by students, for students. Dive into the world of AWS, connect with industry leaders, and accelerate your cloud computing journey.",
-  date: "2026-06-10T09:00:00+05:30",
+  date: "2026-09-09T09:00:00+05:30",
   venue: "Matrusri Engineering College",
   venueShort: "mecs",
   registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeFZHIXnUFz46NuwibriOUkL7rEjk-PQetA8X0z2o9TCQK4pA/viewform",
@@ -16,7 +16,7 @@ export const eventData = {
   ],
   about: {
     paragraphs: [
-      { html: '<span class="highlight">AWS Student Builder Group mecs</span> is a dynamic, student-led community supported by <span class="highlight">Amazon Web Services (AWS)</span>. The AWS Student Community Day at mecs will be held in <span class="highlight">10th June 2026</span>. Our mission is to empower students with the right skills, tools, and opportunities to explore the cloud, build innovative solutions, and collaborate with peers and industry leaders. We regularly host technical workshops, hackathons, and mentorship sessions to help students transform ideas into impactful projects.' },
+      { html: '<span class="highlight">AWS Student Builder Group MECS</span> is a dynamic, student-led community supported by <span class="highlight">Amazon Web Services (AWS)</span>. The AWS Student Community Day at mecs will be held in <span class="highlight">9th September 2026</span>. Our mission is to empower students with the right skills, tools, and opportunities to explore the cloud, build innovative solutions, and collaborate with peers and industry leaders. We regularly host technical workshops, hackathons, and mentorship sessions to help students transform ideas into impactful projects.' },
       { html: 'The <span class="highlight">AWS Student Community Day (SCD)</span> is the flagship annual event of the AWS Student Builder Group. It is a one-day, <span class="highlight">student-driven conference</span> designed to celebrate technology, innovation, and collaboration. Organized entirely by student leaders with guidance from AWS, SCD brings together cloud enthusiasts, developers, and industry experts to share knowledge, showcase real-world use cases, and inspire the next generation of builders.' }
     ],
     image: "/about-event.jpg"
@@ -93,9 +93,9 @@ export const eventData = {
     image: "/scd/clg_location_pic.avif"
   },
   eventSpaces: [
-    { title: "N104", label: "Data Analytics", desc: "Headline keynotes and plenary sessions. The day opens and closes on this stage.", icon: "monitor" },
-    { title: "KVR Hall", label: "DevOps Engineering", desc: "Panel discussions, lightning talks, and moderated conversations with industry guests.", icon: "users" },
-    { title: "MV Sridhar Hall", label: "Cybersecurity", desc: "Roll-up-your-sleeves build sessions. Bring a laptop, leave having shipped something.", icon: "layout" }
+    { title: "MV Sridhar Hall", label: "Keynote and Cybersecurity", desc: "Roll-up-your-sleeves build sessions. Bring a laptop, leave having shipped something.", icon: "layout" },
+    { title: "To be announced", label: "Data Analytics", desc: "Headline keynotes and plenary sessions. The day opens and closes on this stage.", icon: "monitor" },
+    { title: "To be announced", label: "DevOps Engineering", desc: "Panel discussions, lightning talks, and moderated conversations with industry guests.", icon: "users" }
   ],
   governingBody: [
     { name: "Vahaj ur Rahman", image: "https://www.awsmjcet.in/images/profiles/vahaj.png" },
