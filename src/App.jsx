@@ -174,13 +174,13 @@ function App() {
                 <span className="tier">Solo</span><h3>Individual Pass</h3>
                 <div className="price"><span className="amount">{eventData.pricing.solo.price}</span><span className="per">{eventData.pricing.solo.per}</span></div>
                 <ul className="features">{eventData.pricing.solo.features.map((f) => <li key={f}><div className="check"><Check size={12} /></div>{f}</li>)}</ul>
-                <button className="buy-btn">Get Individual Pass</button>
+                <a className="buy-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfpMUhrU3QF7n1sLbGIxZPGuQoHT6A8jGOhQe184kl4Bcx9nA/viewform" target="_blank" rel="noopener noreferrer">Get Individual Pass</a>
               </div></div>
               <div className="pricing-card squad"><div className="popular-tag">POPULAR</div><div className="card-inner">
                 <span className="tier">Squad</span><h3>Group Pass (4 People)</h3>
                 <div className="price"><span className="amount">{eventData.pricing.squad.price}</span><span className="per">{eventData.pricing.squad.per}</span></div>
                 <ul className="features">{eventData.pricing.squad.features.map((f) => <li key={f}><div className="check"><Check size={12} /></div>{f}</li>)}</ul>
-                <button className="buy-btn">Get Group Pass</button>
+                <a className="buy-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfpMUhrU3QF7n1sLbGIxZPGuQoHT6A8jGOhQe184kl4Bcx9nA/viewform" target="_blank" rel="noopener noreferrer">Get Group Pass</a>
               </div></div>
             </div>
           </div>

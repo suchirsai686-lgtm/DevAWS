@@ -401,8 +401,9 @@ ul { list-style: none; }
 .pricing-card.squad .features li .check { color: #a78bfa; }
 .pricing-card .features li .check svg { width: 12px; height: 12px; }
 .pricing-card .buy-btn {
-  width: 100%; padding: 16px; border-radius: 12px; font-weight: 600;
+  display: block; width: 100%; padding: 16px; border-radius: 12px; font-weight: 600;
   font-size: 16px; cursor: pointer; transition: all .2s; margin-top: 16px;
+  text-align: center;
 }
 .pricing-card.solo .buy-btn {
   background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
