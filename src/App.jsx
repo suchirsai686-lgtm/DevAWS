@@ -75,6 +75,7 @@ function App() {
         <section className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
           <div className="hero-glow-1" style={{ top: '25%', left: 'auto', right: '-80px' }} />
           <div className="hero-glow-2" style={{ bottom: 0, right: 'auto', left: '-80px' }} />
+          <div className="cfs-bg-left"><img src="/call-for-speakers.png" alt="" /></div>
           <div className="scd-container" style={{ position: 'relative' }}>
             <div className="text-center">
               <SectionBadge icon={Mic} label="Call for Speakers" />

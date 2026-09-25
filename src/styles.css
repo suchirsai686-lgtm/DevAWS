@@ -130,6 +130,16 @@ ul { list-style: none; }
 .hero-bg-right img {
   height: 100%; width: auto; opacity: .4;
 }
+.cfs-bg-left {
+  position: absolute; top: 0; left: 0; bottom: 0; z-index: -1;
+  display: flex; align-items: center; justify-content: flex-start;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, #000 35%);
+  mask-image: linear-gradient(to left, transparent 0%, #000 35%);
+}
+.cfs-bg-left img {
+  height: 100%; width: auto; opacity: .4;
+}
 .hero-badge {
   display: inline-block; padding: 6px 16px; border-radius: 9999px;
   border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.05);
