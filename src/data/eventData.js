@@ -75,13 +75,13 @@ export const eventData = {
   ],
   governingBody: [
     { name: "Vahaj ur Rahman", image: "https://www.awsmjcet.in/images/profiles/vahaj.png" },
-    { name: "Zaid Ali Khan", image: "https://www.awsmjcet.in/images/profiles/zaid.jpg" },
-    { name: "Nahid Sami", image: "https://www.awsmjcet.in/images/profiles/nahid.jpg" },
-    { name: "Affah ullah shaik", image: "https://www.awsmjcet.in/images/profiles/afham.jpg" },
-    { name: "Sidra Aleem", image: "https://www.awsmjcet.in/images/profiles/sidra.jpg" },
-    { name: "Saad Riyan", image: "https://www.awsmjcet.in/images/profiles/saad.png" },
-    { name: "Musab Umayr", image: "https://www.awsmjcet.in/images/profiles/musab.jpg" },
-    { name: "Shaik Abrar", image: "https://www.awsmjcet.in/images/profiles/abrar.jpg" }
+    { name: "Zaid Ali Khan", image: "/team/gov-02.png" },
+    { name: "Nahid Sami", image: "/team/gov-03.png" },
+    { name: "Affah ullah shaik", image: "/team/gov-04.png" },
+    { name: "Sidra Aleem", image: "/team/gov-05.png" },
+    { name: "Saad Riyan", image: "/team/gov-06.png" },
+    { name: "Musab Umayr", image: "/team/gov-07.png" },
+    { name: "Shaik Abrar", image: "/team/gov-08.jpg" }
   ],
   socialLinks: {
     meetup: "https://www.meetup.com/aws-sbg-mecs/",

@@ -48,7 +48,7 @@ export function PersistentCountdown({ target }) {
         return;
       }
       const max = document.documentElement.scrollHeight - window.innerHeight;
-      setScrolled(max > 0 && window.scrollY / max >= 0.75);
+      setScrolled(max > 0 && window.scrollY / max >= 0.5);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });

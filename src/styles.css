@@ -185,6 +185,12 @@ ul { list-style: none; }
   letter-spacing: .12em; text-transform: uppercase; color: #a78bfa;
 }
 .countdown-done { margin-top: 40px; text-align: center; color: #a1a1aa; font-size: 15px; }
+@media (max-width: 560px) {
+  .countdown { flex-wrap: nowrap; gap: 8px; margin-top: 32px; }
+  .countdown-cell { flex: 1 1 0; min-width: 0; padding: 12px 4px; }
+  .countdown-cell strong { font-size: 22px; }
+  .countdown-cell span { font-size: 9px; letter-spacing: .06em; }
+}
 
 .persistent-countdown {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 4000;
