@@ -1,6 +1,6 @@
 import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin, Phone } from "lucide-react";
 import Navbar from "./components/Navbar";
-import { PersistentCountdown } from "./components/Countdown";
+import Countdown, { PersistentCountdown } from "./components/Countdown";
 import { eventData } from "./data/eventData";
 
 const speakerFormatIcons = { mic: Mic, code: Code, zap: Zap, users: Users };
@@ -24,6 +24,7 @@ function App() {
         <section className="scd-section hero-section">
           <div className="hero-glow-1" />
           <div className="hero-glow-2" />
+          <div className="hero-bg-right"><img src="/hero-side.jpeg" alt="" /></div>
           <div className="scd-container">
             <div className="hero-inner">
               <div className="hero-badge">AWS Student Builder Group mecs Presents</div>
@@ -33,6 +34,7 @@ function App() {
                 <a className="hero-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfpMUhrU3QF7n1sLbGIxZPGuQoHT6A8jGOhQe184kl4Bcx9nA/viewform" target="_blank" rel="noopener noreferrer">
                   <div className="cta-hover" /><span>Register Now</span><ArrowRight size={20} />
                 </a>
+                <Countdown target={eventData.date} />
               </div>
             </div>
           </div>
