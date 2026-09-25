@@ -152,6 +152,7 @@ function App() {
 
         {/* EXPERIENCE */}
         <section className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="exp-bg-right"><img src="/pricing-right.png" alt="" /></div>
           <div className="scd-container">
             <div className="text-center">
               <span style={{ color: '#a78bfa', fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.1em', marginBottom: 16, display: 'block' }}>The Full Experience</span>
@@ -226,6 +227,7 @@ function App() {
 
         {/* COMMUNITY PARTNERS */}
         <section className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="partners-bg-left"><img src="/call-for-speakers.png" alt="" /></div>
           <div className="scd-container">
             <div className="text-center">
               <h2 className="section-title">Community <span className="gradient-text">partners</span></h2>
