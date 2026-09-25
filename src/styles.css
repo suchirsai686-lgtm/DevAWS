@@ -120,14 +120,14 @@ ul { list-style: none; }
   background: rgba(99,102,241,.1); border-radius: 50%; filter: blur(150px); z-index: -1;
 }
 .hero-inner { text-align: center; max-width: 900px; margin: 0 auto; }
-.hero-bg-right {
+.hero-bg-right, .pricing-bg-right {
   position: absolute; top: 0; right: 0; bottom: 0; z-index: -1;
   display: flex; align-items: center; justify-content: flex-end;
   pointer-events: none;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 35%);
   mask-image: linear-gradient(to right, transparent 0%, #000 35%);
 }
-.hero-bg-right img {
+.hero-bg-right img, .pricing-bg-right img {
   height: 100%; width: auto; opacity: .4;
 }
 .cfs-bg-left {

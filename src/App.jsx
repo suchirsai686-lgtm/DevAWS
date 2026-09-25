@@ -170,6 +170,7 @@ function App() {
 
         {/* PRICING */}
         <section id="pricing" className="scd-section">
+          <div className="pricing-bg-right"><img src="/pricing-right.png" alt="" /></div>
           <div className="scd-container">
             <div className="text-center"><h2 className="section-title">Tickets & Pricing</h2><p className="section-desc">Pick the pass that fits you — one all-access ticket to everything we're packing into Student Community Day.</p></div>
             <div className="pricing-grid">
