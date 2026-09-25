@@ -384,7 +384,7 @@ function App() {
             <span className="gov-label">Governing Body</span>
             <div className="avatars">
               {eventData.governingBody.map((m) => (
-                <a key={m.name} href="#"><img src={m.image} alt={m.name} /></a>
+                <a key={m.name} href="#"><img src={m.image} alt={m.name} style={m.objectPosition ? { objectPosition: m.objectPosition } : undefined} /></a>
               ))}
             </div>
           </div>
