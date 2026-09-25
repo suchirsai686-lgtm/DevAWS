@@ -3,7 +3,7 @@ export const eventData = {
   location: "mecs",
   year: "2026",
   tagline: "A premier conference led by students, for students. Dive into the world of AWS, connect with industry leaders, and accelerate your cloud computing journey.",
-  date: "2026-09-09T09:00:00+05:30",
+  date: "2026-10-09T09:00:00+05:30",
   venue: "Matrusri Engineering College",
   venueShort: "mecs",
   registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeFZHIXnUFz46NuwibriOUkL7rEjk-PQetA8X0z2o9TCQK4pA/viewform",
