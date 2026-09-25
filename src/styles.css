@@ -166,8 +166,8 @@ ul { list-style: none; }
 }
 @media (max-width: 767px) {
   .exp-bg-right, .partners-bg-left { display: flex; align-items: flex-start; }
-  .exp-bg-right { padding-top: 110px; }
-  .partners-bg-left { padding-top: 150px; }
+  .exp-bg-right { padding-top: 60px; }
+  .partners-bg-left { padding-top: 100px; }
   .pricing-bg-right, .cfs-bg-left { display: none; }
 }
 .hero-badge {
