@@ -600,7 +600,7 @@ body.has-persistent-countdown { padding-bottom: 76px; }
 .partner-card:hover { border-color: rgba(139,92,246,.4); transform: translateY(-6px);
   box-shadow: 0 20px 50px -15px rgba(139,92,246,.35), inset 0 0 40px rgba(139,92,246,.06); }
 .partner-card .partner-content { position: relative; z-index: 10; text-align: center; }
-.partner-card img { height: 64px; width: auto; object-fit: contain; filter: grayscale(1); opacity: .7; transition: all .5s; margin: 0 auto; }
+.partner-card img { height: 64px; width: auto; object-fit: contain; filter: none; opacity: 1; transition: all .5s; margin: 0 auto; }
 .partner-card:hover img { filter: none; opacity: 1; }
 .partner-card .partner-name { margin-top: 16px; font-size: 14px; font-weight: 500; color: #71717a; transition: color .5s; }
 .partner-card:hover .partner-name { color: #d4d4d8; }
