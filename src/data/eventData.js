@@ -7,6 +7,7 @@ export const eventData = {
   venue: "Matrusri Engineering College",
   venueShort: "mecs",
   registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeFZHIXnUFz46NuwibriOUkL7rEjk-PQetA8X0z2o9TCQK4pA/viewform",
+  membershipUrl: "https://www.meetup.com/aws-sbg-at-matrusri-engineering-college/",
   registrationGroupUrl: "#",
   nav: [
     ["about", "About"],
@@ -16,8 +17,8 @@ export const eventData = {
   ],
   about: {
     paragraphs: [
-      { html: '<span class="highlight">AWS Student Builder Group MECS</span> is a dynamic, student-led community supported by <span class="highlight">Amazon Web Services (AWS)</span>. The AWS Student Community Day at mecs will be held in <span class="highlight">9th September 2026</span>. Our mission is to empower students with the right skills, tools, and opportunities to explore the cloud, build innovative solutions, and collaborate with peers and industry leaders. We regularly host technical workshops, hackathons, and mentorship sessions to help students transform ideas into impactful projects.' },
-      { html: 'The <span class="highlight">AWS Student Community Day (SCD)</span> is the flagship annual event of the AWS Student Builder Group. It is a one-day, <span class="highlight">student-driven conference</span> designed to celebrate technology, innovation, and collaboration. Organized entirely by student leaders with guidance from AWS, SCD brings together cloud enthusiasts, developers, and industry experts to share knowledge, showcase real-world use cases, and inspire the next generation of builders.' }
+      { html: '<span class="highlight">The AWS Student Builder Group MECS</span> is a student-led community supported by <span class="highlight">Amazon Web Services (AWS)</span> at Matrusri Engineering College. We are excited to bring you the <span class="highlight">AWS Student Community Day 2026</span>, happening on <span class="highlight">9th Oct</span> at Matrusri Engineering College. Join us for an exciting day of technology, innovation, and collaboration. Discover new ideas, connect with fellow tech enthusiasts, and explore the limitless possibilities of AWS. Together, we\u2019re building skills, creating solutions, and shaping the future of cloud technology.' },
+      { html: '<span class="highlight">The AWS Student Community Day (SCD)</span> is a flagship, one-day conference that brings together students, developers, and industry experts to celebrate technology and innovation. Organized by student leaders, SCD is all about learning, building, and connecting. Explore the latest in cloud computing, gain real-world insights, and engage with the AWS community. <span class="highlight">One day. Endless possibilities.</span> A community of builders.' }
     ],
     image: "/about-event.jpg"
   },
@@ -56,7 +57,7 @@ export const eventData = {
     }
   ],
   communityPartners: [
-    { name: "DevCatalyst", logo: "" }
+    { name: "DevCatalyst", logo: "/devcatalyst.jpg" }
   ],
   sponsors: [
     { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" }
@@ -65,7 +66,7 @@ export const eventData = {
     college: "Matrusri Engineering College",
     address: "Saidabad, Hyderabad, Telangana",
     mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.1190525981624!2d78.5052289!3d17.3580034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98686ae78299%3A0xb15620bbd3e6bec!2sMatrusri%20Engineering%20College!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
-    image: "/scd/clg_location_pic.avif"
+    image: "/venue.jpg"
   },
   eventSpaces: [
     { title: "MV Sridhar Hall", label: "Keynote and Cybersecurity", desc: "Roll-up-your-sleeves build sessions. Bring a laptop, leave having shipped something.", icon: "layout" },

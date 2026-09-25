@@ -39,15 +39,36 @@ export default function Countdown({ target }) {
 
 export function PersistentCountdown({ target }) {
   const time = useCountdown(target);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (!time.done) {
+    const onScroll = () => {
+      if (window.innerWidth >= 768) {
+        setScrolled(true);
+        return;
+      }
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setScrolled(max > 0 && window.scrollY / max >= 0.75);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  const show = !time.done && scrolled;
+
+  useEffect(() => {
+    if (show) {
       document.body.classList.add("has-persistent-countdown");
     }
     return () => document.body.classList.remove("has-persistent-countdown");
-  }, [time.done]);
+  }, [show]);
 
-  if (time.done) return null;
+  if (!show) return null;
 
   return (
     <div className="persistent-countdown">

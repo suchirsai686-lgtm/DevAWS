@@ -168,9 +168,9 @@ function App() {
         </section>
 
         {/* PRICING */}
-        <section className="scd-section">
+        <section id="pricing" className="scd-section">
           <div className="scd-container">
-            <div className="text-center"><h2 className="section-title">Tickets & Pricing</h2><p className="section-desc">Pick the pass that fits you — one all-access ticket to everything we're packing into Student Community Day.</p><div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, margin: '0 0 64px', padding: '8px 20px', borderRadius: 999, background: 'linear-gradient(135deg, rgba(139,92,246,.15), rgba(217,70,239,.1))', border: '1px solid rgba(139,92,246,.25)', color: '#c084fc', fontSize: 13, fontWeight: 600, letterSpacing: '.03em' }}><Gift size={16} /><span>Early Bird Offer</span></div></div>
+            <div className="text-center"><h2 className="section-title">Tickets & Pricing</h2><p className="section-desc">Pick the pass that fits you — one all-access ticket to everything we're packing into Student Community Day.</p></div>
             <div className="pricing-grid">
               <div className="pricing-card solo"><div className="card-inner">
                 <span className="tier">Solo</span><h3>Individual Pass</h3>

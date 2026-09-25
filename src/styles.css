@@ -102,6 +102,7 @@ ul { list-style: none; }
 .scd-section {
   padding: 96px 24px;
   position: relative; overflow: hidden;
+  scroll-margin-top: 96px;
 }
 @media (min-width: 768px) { .scd-section { padding: 96px 48px; } }
 @media (min-width: 1024px) { .scd-section { padding: 96px 96px; } }
@@ -126,7 +127,7 @@ ul { list-style: none; }
   mask-image: linear-gradient(to right, transparent 0%, #000 45%);
 }
 .hero-bg-right img {
-  position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+  position: absolute; top: 50%; right: -100%; transform: translateY(-50%);
   width: 200%; height: auto; opacity: .4;
 }
 .hero-badge {
