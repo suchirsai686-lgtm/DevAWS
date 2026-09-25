@@ -24,7 +24,7 @@ function App() {
         <section className="scd-section hero-section">
           <div className="hero-glow-1" />
           <div className="hero-glow-2" />
-          <div className="hero-bg-right"><img src="/hero-side.jpeg" alt="" /></div>
+          <div className="hero-bg-right"><img src="/hero-side.png" alt="" /></div>
           <div className="scd-container">
             <div className="hero-inner">
               <div className="hero-badge">AWS Student Builder Group mecs Presents</div>

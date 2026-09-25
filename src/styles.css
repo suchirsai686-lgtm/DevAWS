@@ -122,13 +122,13 @@ ul { list-style: none; }
 .hero-inner { text-align: center; max-width: 900px; margin: 0 auto; }
 .hero-bg-right {
   position: absolute; top: 0; right: 0; bottom: 0; z-index: -1;
-  width: min(46%, 620px); overflow: hidden; pointer-events: none;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 45%);
-  mask-image: linear-gradient(to right, transparent 0%, #000 45%);
+  display: flex; align-items: center; justify-content: flex-end;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 35%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 35%);
 }
 .hero-bg-right img {
-  position: absolute; top: 50%; right: -100%; transform: translateY(-50%);
-  width: 200%; height: auto; opacity: .4;
+  height: 100%; width: auto; opacity: .4;
 }
 .hero-badge {
   display: inline-block; padding: 6px 16px; border-radius: 9999px;
