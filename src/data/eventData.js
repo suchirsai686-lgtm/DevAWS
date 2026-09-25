@@ -45,12 +45,12 @@ export const eventData = {
   },
   speakers: [
     {
-      name: "Gaurav Kankaria",
-      role: "Head of Analytics & AI/ML @Oneture",
-      credential: "Ex Data Scientist | ISBian",
-      ambassador: "AWS Global AI Ambassador",
-      topic: "AI First Future: Building Skills, Businesses & Careers in the Age of Intelligence",
-      image: "https://www.awsmjcet.in/scd/speakers/Gaurav_Kankaria.png",
+      name: "Satyajit Samantray",
+      role: "Principal Cloud Architect  @Searce",
+      credential: "AWS Ambassador",
+      ambassador: "AWS Community Builder",
+      topic: "CyberSecurity",
+      image: "/speaker.jpg",
       blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
       blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
       blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
