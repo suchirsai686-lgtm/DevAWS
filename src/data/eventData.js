@@ -74,6 +74,7 @@ export const eventData = {
     { title: "To be announced", label: "DevOps Engineering", desc: "Panel discussions, lightning talks, and moderated conversations with industry guests.", icon: "users" }
   ],
   governingBody: [
+    { name: "Esha Satvase", image: "/team/gov-01-face.jpg" },
     { name: "Zaid Ali Khan", image: "/team/gov-02-face.jpg" },
     { name: "Nahid Sami", image: "/team/gov-03-face.jpg" },
     { name: "Affah ullah shaik", image: "/team/gov-04-face.jpg" },
