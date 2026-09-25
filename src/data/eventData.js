@@ -74,7 +74,6 @@ export const eventData = {
     { title: "To be announced", label: "DevOps Engineering", desc: "Panel discussions, lightning talks, and moderated conversations with industry guests.", icon: "users" }
   ],
   governingBody: [
-    { name: "Vahaj ur Rahman", image: "https://www.awsmjcet.in/images/profiles/vahaj.png" },
     { name: "Zaid Ali Khan", image: "/team/gov-02-face.jpg" },
     { name: "Nahid Sami", image: "/team/gov-03-face.jpg" },
     { name: "Affah ullah shaik", image: "/team/gov-04-face.jpg" },
