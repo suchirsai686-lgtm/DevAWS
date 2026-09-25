@@ -77,7 +77,7 @@ export const eventData = {
     { name: "Esha Satvase", image: "/team/gov-01-face.jpg" },
     { name: "Zaid Ali Khan", image: "/team/gov-02-face.jpg" },
     { name: "Nahid Sami", image: "/team/gov-03-face.jpg" },
-    { name: "Affah ullah shaik", image: "/team/gov-04-face.jpg", objectPosition: "top" },
+    { name: "Affah ullah shaik", image: "/team/gov-04-face.jpg" },
     { name: "Sidra Aleem", image: "/team/gov-05-face.jpg" },
     { name: "Saad Riyan", image: "/team/gov-06-face.jpg" },
     { name: "Musab Umayr", image: "/team/gov-07-face.jpg" },
