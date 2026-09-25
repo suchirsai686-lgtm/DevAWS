@@ -28,7 +28,7 @@ function App() {
           <div className="scd-container">
             <div className="hero-inner">
               <div className="hero-badge">AWS Student Builder Group mecs Presents</div>
-              <h1 className="hero-title">Student <span className="gradient-text">Community</span><br />Day 2026 Hyderabad</h1>
+              <h1 className="hero-title">AWS Student <span className="gradient-text">Community</span><br />Day 2026 Hyderabad</h1>
               <p className="hero-desc">{eventData.tagline}</p>
               <div style={{ paddingTop: 8 }}>
                 <a className="hero-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfpMUhrU3QF7n1sLbGIxZPGuQoHT6A8jGOhQe184kl4Bcx9nA/viewform" target="_blank" rel="noopener noreferrer">
