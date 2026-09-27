@@ -45,6 +45,15 @@ ul { list-style: none; }
 }
 .floating-nav > * { flex-shrink: 0; }
 .nav-link, .membership-pill { white-space: nowrap; }
+
+.nav-logo {
+  width: 36px; height: 36px; border-radius: 50%;
+  overflow: hidden; flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,.15);
+  transition: border-color .3s, transform .2s;
+}
+.nav-logo:hover { border-color: var(--purple); transform: scale(1.05); }
+.nav-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 767px) {
   .floating-nav {
     max-width: calc(100% - 24px);

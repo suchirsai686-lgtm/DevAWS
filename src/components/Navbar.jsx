@@ -3,6 +3,9 @@ import { eventData } from "../data/eventData";
 export default function Navbar() {
   return (
     <div className="floating-nav">
+      <a className="nav-logo" href="https://www.awsmecs.in/" aria-label="MECS Home">
+        <img src="/MECS-LOGO.jpg" alt="MECS Logo" />
+      </a>
       <a className="nav-link" href="https://www.awsmecs.in/">Home</a>
       <a className="neon-btn-wrapper" href="#pricing">
         <div className="neon-btn-glow" />
