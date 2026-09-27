@@ -1,4 +1,5 @@
 import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin, Phone } from "lucide-react";
+import { MeetupIcon, LinkedinIcon, InstagramIcon } from "./components/SocialIcons";
 import Navbar from "./components/Navbar";
 import Countdown, { PersistentCountdown } from "./components/Countdown";
 import { eventData } from "./data/eventData";
@@ -354,9 +355,9 @@ function App() {
               <div><h2>AWS Community</h2><div className="brand-underline" /></div>
               <p>Empowering developers to build, learn, and grow with AWS technologies through community events, workshops, and shared knowledge.</p>
               <div className="footer-socials">
-                <a href={eventData.socialLinks.meetup} target="_blank" rel="noopener noreferrer">M</a>
-                <a href={eventData.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">in</a>
-                <a href={eventData.socialLinks.instagram} target="_blank" rel="noopener noreferrer">I</a>
+                <a href={eventData.socialLinks.meetup} target="_blank" rel="noopener noreferrer" aria-label="Meetup"><MeetupIcon /></a>
+                <a href={eventData.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedinIcon /></a>
+                <a href={eventData.socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstagramIcon /></a>
               </div>
             </div>
             <div className="footer-links-grid">

@@ -84,9 +84,9 @@ export const eventData = {
     { name: "Shaik Abrar", image: "/team/gov-08-face.jpg" }
   ],
   socialLinks: {
-    meetup: "https://www.meetup.com/aws-sbg-mecs/",
+    meetup: "https://www.meetup.com/aws-sbg-at-matrusri-engineering-college/",
     linkedin: "https://www.linkedin.com/company/aws-cloud-club-mecs/",
-    instagram: "https://www.instagram.com/awsclub.mecs/"
+    instagram: "https://www.instagram.com/aws_student_builder_group_mecs?stkn=MWduYXZlaGRveG5wdg=="
   },
   speakerFormUrl: "#"
 };
