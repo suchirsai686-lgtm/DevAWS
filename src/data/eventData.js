@@ -56,12 +56,12 @@ export const eventData = {
       blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
     },
     {
-      name: "Satyajit Samantray",
-      role: "Principal Cloud Architect  @Searce",
-      credential: "AWS Ambassador",
-      ambassador: "AWS Community Builder",
-      topic: "DevOps",
-      image: "/speaker.jpg",
+      name: "Sathpal Singh",
+      role: "Director of Technology @Optum",
+      credential: "Microsoft MVP in Azure Kubernetes Service",
+      ambassador: "Grafana Champion",
+      topic: "Agentic AI",
+      image: "/speaker-2.jpg",
       blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
       blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
       blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
