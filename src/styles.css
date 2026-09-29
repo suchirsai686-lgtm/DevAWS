@@ -47,7 +47,7 @@ ul { list-style: none; }
 .nav-link, .membership-pill { white-space: nowrap; }
 
 .site-logo {
-  position: fixed; top: 10px; left: 20px; z-index: 5001;
+  position: absolute; top: 10px; left: 20px; z-index: 5001;
   width: 76px; height: 76px; border-radius: 50%;
   overflow: hidden; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
