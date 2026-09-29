@@ -201,8 +201,8 @@ function App() {
               <p className="section-desc">Industry leaders, AWS ambassadors, and builders who are shaping the future.</p>
             </div>
             <div className="speakers-grid" style={{ maxWidth: 1024, margin: '0 auto' }}>
-              {eventData.speakers.map((s) => (
-                <div key={s.name} className="speaker-card">
+              {eventData.speakers.map((s, i) => (
+                <div key={`${s.name}-${i}`} className="speaker-card">
                   <div className="blob-container">
                     <div className="blob-blob" style={{ width: s.blobWidth, height: s.blobHeight, top: s.blobTop, left: s.blobLeft, transform: 'translate(-50%, 0)', borderRadius: s.blobRadius, background: s.blobGradient }} />
                     <div className="speaker-img-wrap" style={{ width: 180, height: 220, borderRadius: s.blobRadius }}>
