@@ -69,7 +69,8 @@ export const eventData = {
   ],
   communityPartners: [
     { name: "DevCatalyst", logo: "/partner.png" },
-    { name: "The Orbit", logo: "/partner-orbit.png" }
+    { name: "The Orbit", logo: "/partner-orbit.png" },
+    { name: "CodeQuesters", logo: "/partner-codequesters.png" }
   ],
   sponsors: [
     { name: "AWS", logo: "/aws-logo.png" }
