@@ -1,7 +1,8 @@
-import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin, Phone, Clock } from "lucide-react";
 import { MeetupIcon, LinkedinIcon, InstagramIcon } from "./components/SocialIcons";
 import Navbar from "./components/Navbar";
 import Countdown, { PersistentCountdown } from "./components/Countdown";
+import Timeline from "./components/Timeline";
 import { eventData } from "./data/eventData";
 
 const speakerFormatIcons = { mic: Mic, code: Code, zap: Zap, users: Users };
@@ -223,6 +224,20 @@ function App() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* AGENDA / TIMELINE */}
+        <section id="agenda" className="scd-section">
+          <div className="hero-glow-1" style={{ top: '5%', left: '-120px' }} />
+          <div className="hero-glow-2" style={{ bottom: '5%', right: '-120px' }} />
+          <div className="scd-container">
+            <div className="text-center">
+              <SectionBadge icon={Clock} label="Event Agenda" />
+              <h2 className="section-title">One day, <span className="gradient-text">hour by hour</span></h2>
+              <p className="section-desc">From check-in to the closing track sessions — here's how SCD 2026 unfolds.</p>
+            </div>
+            <Timeline items={eventData.agenda} />
           </div>
         </section>
 
