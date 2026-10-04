@@ -15,6 +15,7 @@ export default function Navbar() {
         {eventData.nav.map(([id, label]) => (
           <a key={id} className="nav-link" href={`#${id}`}>{label}</a>
         ))}
+        <a className="challenge-pill" href="#challenge">Social Media Challenge</a>
         <a className="membership-pill" href={eventData.membershipUrl} target="_blank" rel="noopener noreferrer">Membership</a>
       </div>
     </>

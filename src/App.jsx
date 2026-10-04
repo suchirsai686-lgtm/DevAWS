@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin, Phone, Clock } from "lucide-react";
 import { MeetupIcon, LinkedinIcon, InstagramIcon } from "./components/SocialIcons";
 import Navbar from "./components/Navbar";
+import ChallengePage from "./components/ChallengePage";
 import Countdown, { PersistentCountdown } from "./components/Countdown";
 import Timeline from "./components/Timeline";
 import { eventData } from "./data/eventData";
@@ -16,6 +18,20 @@ function SectionBadge({ icon: Icon, label }) {
 }
 
 function App() {
+  const [hash, setHash] = useState(() => window.location.hash);
+
+  useEffect(() => {
+    const onHashChange = () => setHash(window.location.hash);
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
+  useEffect(() => {
+    if (hash === "#challenge") window.scrollTo(0, 0);
+  }, [hash]);
+
+  if (hash === "#challenge") return <ChallengePage />;
+
   return (
     <div className="page-bg">
       <Navbar />
