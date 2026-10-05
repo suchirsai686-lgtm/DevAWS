@@ -66,6 +66,17 @@ export const eventData = {
       blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
       blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
       blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
+    },
+    {
+      name: "Sathpal Singh",
+      role: "Director of Technology @Optum",
+      credential: "Microsoft MVP in Azure Kubernetes Service",
+      ambassador: "Grafana Champion",
+      topic: "Agentic AI",
+      image: "/speaker-2.jpg",
+      blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
+      blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
+      blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
     }
   ],
   agenda: [
@@ -93,8 +104,8 @@ export const eventData = {
     image: "/venue.jpg"
   },
   eventSpaces: [
-    { title: "MV Sridhar Hall", label: "Keynote and Cybersecurity", desc: "Roll-up-your-sleeves build sessions. Bring a laptop, leave having shipped something.", icon: "layout" },
-    { title: "To be announced", label: "Data Analytics", desc: "Headline keynotes and plenary sessions. The day opens and closes on this stage.", icon: "monitor" },
+    { title: "MV Sridhar Hall", label: "Keynote and Data Analytics", desc: "Roll-up-your-sleeves build sessions. Bring a laptop, leave having shipped something.", icon: "layout" },
+    { title: "To be announced", label: "Kiro", desc: "Headline keynotes and plenary sessions. The day opens and closes on this stage.", icon: "monitor" },
     { title: "To be announced", label: "DevOps Engineering", desc: "Panel discussions, lightning talks, and moderated conversations with industry guests.", icon: "users" }
   ],
   governingBody: [
