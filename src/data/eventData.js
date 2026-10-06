@@ -77,6 +77,17 @@ export const eventData = {
       blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
       blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
       blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
+    },
+    {
+      name: "Praveen Kumar Grandhi",
+      role: "DevOps Admin @Accenture",
+      credential: "5+ years of experience in Site Reliability Engineering",
+      ambassador: "AWS Engineer",
+      topic: "AWS security",
+      image: "/Profile_picture.png",
+      blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
+      blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
+      blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
     }
   ],
   agenda: [
@@ -92,7 +103,8 @@ export const eventData = {
     { name: "DevCatalyst", logo: "/partner.png" },
     { name: "The Orbit", logo: "/partner-orbit.png" },
     { name: "CodeQuesters", logo: "/partner-codequesters.png" },
-    { name: "Kramers", logo: "/partner-kramers.png" }
+    { name: "Kramers", logo: "/partner-kramers.png" },
+    { name: "Eleven Labs", logo: "/elevenlabs-logo-white.png" }
   ],
   sponsors: [
     { name: "AWS", logo: "/aws-logo.png" }

@@ -262,7 +262,7 @@ function App() {
           <div className="partners-bg-left"><img src="/call-for-speakers.png" alt="" /></div>
           <div className="scd-container">
             <div className="text-center">
-              <h2 className="section-title">Community <span className="gradient-text">partners</span></h2>
+              <h2 className="section-title"><span className="gradient-text">Partners</span></h2>
               <p className="section-desc">Student communities and organizations powering the movement alongside us.</p>
             </div>
             <div className="partner-grid">
