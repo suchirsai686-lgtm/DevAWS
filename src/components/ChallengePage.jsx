@@ -172,7 +172,7 @@ export default function ChallengePage() {
               for LinkedIn.
             </li>
             <li>Also be sure to have the <strong>#AWSSBGMECS</strong> in the post.</li>
-            <li>The post with the most engagement will get special goodies.</li>
+            <li>The post with the most engagement will get <span className="highlight">special goodies</span>.</li>
           </ul>
         </div>
 

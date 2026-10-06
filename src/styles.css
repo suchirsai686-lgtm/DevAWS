@@ -949,6 +949,11 @@ body.has-persistent-countdown { padding-bottom: 76px; }
 .challenge-guidelines a { color: #a78bfa; text-decoration: underline; word-break: break-all; }
 .challenge-guidelines a:hover { color: #c4b5fd; }
 .challenge-guidelines strong { color: #c4b5fd; font-weight: 700; }
+.challenge-guidelines .highlight {
+  color: #fff; font-weight: 700;
+  background: linear-gradient(transparent 55%, rgba(139, 92, 246, .55) 55%);
+  padding: 0 2px;
+}
 
 
 .challenge-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 48px; align-items: start; }
