@@ -161,6 +161,21 @@ export default function ChallengePage() {
           </p>
         </div>
 
+        <div className="challenge-guidelines">
+          <h3>Important Guidelines</h3>
+          <ul>
+            <li>
+              When you post this on your social media, don't forget to tag us at{" "}
+              <a href="https://www.instagram.com/aws_student_builder_group_mecs?stkn=c29lMHRiN2hocGw0" target="_blank" rel="noopener noreferrer">Instagram</a>{" "}
+              for Instagram and{" "}
+              <a href="https://www.linkedin.com/company/aws-cloud-club-mecs/" target="_blank" rel="noopener noreferrer">LinkedIn</a>{" "}
+              for LinkedIn.
+            </li>
+            <li>Also be sure to have the <strong>#AWSSBGMECS</strong> in the post.</li>
+            <li>The post with the most engagement will get special goodies.</li>
+          </ul>
+        </div>
+
         <div className="challenge-grid">
           <form className="challenge-form" onSubmit={(e) => e.preventDefault()}>
             <div className="challenge-field">
