@@ -64,7 +64,7 @@ ul { list-style: none; }
 @media (max-width: 767px) {
   .site-logo { top: 12px; left: 10px; width: 56px; height: 56px; border-radius: 50%; }
   .floating-nav {
-    left: 76px; right: 10px;
+    left: 90px; right: 10px;
     max-width: none;
     overflow-x: auto;
     scrollbar-width: none;
@@ -74,6 +74,16 @@ ul { list-style: none; }
   .floating-nav::-webkit-scrollbar { display: none; }
   .nav-link { font-size: 13px; }
   .membership-pill { padding: 6px 12px; font-size: 13px; }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .floating-nav {
+    left: 112px; right: 16px;
+    max-width: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 14px;
+  }
+  .floating-nav::-webkit-scrollbar { display: none; }
 }
 .nav-link {
   position: relative; font-size: 14px; font-weight: 500; color: #d4d4d8;
