@@ -91,9 +91,9 @@ export const eventData = {
     },
     {
       name: "Snehith Allamraju",
-      role: "data analytics and AI leader with 19+ years of enterprise experience",
-      credential: "active volunteer in Hyderabad\u2019s data & tech community",
-      ambassador: "",
+      role: "Senior Director, Data Analytics Operations @Dun & Bradstreet",
+      credential: "data analytics and AI leader with 19+ years of enterprise experience",
+      ambassador: "active volunteer in Hyderabad\u2019s data & tech community",
       topic: "Data and AI",
       image: "/speaker-3.jpeg",
       blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
