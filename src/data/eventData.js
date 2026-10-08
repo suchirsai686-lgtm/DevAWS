@@ -99,6 +99,17 @@ export const eventData = {
       blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
       blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
       blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
+    },
+    {
+      name: "Varsha Verma",
+      role: "AWS Cloud Specialist",
+      credential: "8 years of experience working across AWS, cloud infrastructure, DevOps, automation, migration, security, and cost optimization.",
+      ambassador: "AWS Community Builder",
+      topic: "Cloud",
+      image: "/speaker-4.jpeg",
+      blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
+      blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
+      blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
     }
   ],
   agenda: [
