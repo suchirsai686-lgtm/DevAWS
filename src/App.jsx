@@ -50,8 +50,8 @@ function App() {
               <h1 className="hero-title">AWS Student <span className="gradient-text">Community</span><br />Day 2026 Hyderabad</h1>
               <p className="hero-desc">{eventData.tagline}</p>
               <div style={{ paddingTop: 8 }}>
-                <a className="hero-cta" href="https://forms.gle/EGzd5tZ2J6sXT82G6" target="_blank" rel="noopener noreferrer">
-                  <div className="cta-hover" /><span>Register Now</span><ArrowRight size={20} />
+                <a className="hero-cta" href="https://myticket-awsscd.vercel.app" target="_blank" rel="noopener noreferrer">
+                  <div className="cta-hover" /><span>My Ticket</span><ArrowRight size={20} />
                 </a>
                 <Countdown target={eventData.date} />
               </div>
