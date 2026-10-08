@@ -1022,3 +1022,47 @@ body.has-persistent-countdown { padding-bottom: 76px; }
   color: #a1a1aa; font-size: 14px;
 }
 .challenge-caption { margin-top: 14px; text-align: center; font-size: 13px; color: #71717a; }
+
+/* ======================== FAQ ======================== */
+.faq-wrap { max-width: 860px; margin: 0 auto; }
+.faq-group + .faq-group { margin-top: 44px; }
+.faq-group-title {
+  font-size: 13px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+  color: #a78bfa; margin-bottom: 16px;
+}
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  border: 1px solid rgba(255,255,255,.08); border-radius: 16px;
+  background: rgba(255,255,255,.03);
+  transition: border-color .3s, background .3s;
+}
+.faq-item:hover { border-color: rgba(139,92,246,.3); }
+.faq-item.open { border-color: rgba(139,92,246,.45); background: rgba(139,92,246,.05); }
+.faq-q {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px 20px; background: none; border: 0; cursor: pointer;
+  font-family: inherit; font-size: 15px; font-weight: 600; color: #fff; text-align: left;
+}
+.faq-q svg { flex-shrink: 0; color: #a78bfa; transition: transform .3s; }
+.faq-item.open .faq-q svg { transform: rotate(180deg); }
+.faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
+.faq-item.open .faq-a { grid-template-rows: 1fr; }
+.faq-a-inner { overflow: hidden; min-height: 0; padding: 0 20px; transition: padding .35s ease; }
+.faq-item.open .faq-a-inner { padding-bottom: 20px; }
+.faq-a-inner p { font-size: 14px; color: #a1a1aa; line-height: 1.7; }
+.faq-a-inner p:last-child { margin-bottom: 0; }
+.faq-a-inner ul { margin: 4px 0 10px; }
+.faq-a-inner li {
+  position: relative; padding-left: 20px;
+  font-size: 14px; color: #a1a1aa; line-height: 1.7;
+}
+.faq-a-inner li::before {
+  content: ''; position: absolute; left: 4px; top: 10px;
+  width: 6px; height: 6px; border-radius: 50%; background: #a78bfa;
+}
+.faq-a-inner b { color: #e4e4e7; font-weight: 600; }
+@media (max-width: 560px) {
+  .faq-q { font-size: 14px; padding: 16px; }
+  .faq-a-inner { padding: 0 16px; }
+  .faq-item.open .faq-a-inner { padding-bottom: 16px; }
+}

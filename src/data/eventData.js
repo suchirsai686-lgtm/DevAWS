@@ -15,6 +15,7 @@ export const eventData = {
     ["agenda", "Agenda"],
     ["sponsors", "Sponsors"],
     ["venue", "Venue"],
+    ["faq", "FAQ"],
   ],
   about: {
     paragraphs: [
@@ -110,6 +111,195 @@ export const eventData = {
       blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
       blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
       blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
+    }
+  ],
+  faqs: [
+    {
+      group: "Event Information",
+      items: [
+        {
+          q: "1. What are the event timings?",
+          a: [
+          "The event will take place on <b>9th October 2026, from 9:00 AM to 5:00 PM</b>.",
+          "Please reach the venue by <b>9:00 AM</b> for registration and check-in."
+          ]
+        },
+        {
+          q: "2. Where is the event happening?",
+          a: [
+          "The event will be held at:",
+          "<b>Matrusri Engineering College</b>",
+          "Saidabad, Hyderabad, Telangana.",
+          "The venue details and directions are available on the event website."
+          ]
+        },
+        {
+          q: "3. What are the morning sessions?",
+          a: [
+          "All participants will attend the morning sessions at <b>MV Sridhar Hall</b>.",
+          "<b>10:30 AM - 11:15 AM</b>",
+          "Agentic AI",
+          "<b>11:15 AM - 12:00 PM</b>",
+          "AI Agents in Action",
+          "<b>12:00 PM - 12:40 PM</b>",
+          "AWS Security"
+          ]
+        },
+        {
+          q: "4. What are the afternoon tracks?",
+          a: [
+          "From <b>2:00 PM to 4:00 PM</b>, you can choose from three different tracks:",
+          ["<b>DevOps</b>", "<b>Cloud</b>", "<b>Data & AI</b>"],
+          "Choose the track that interests you and attend the sessions under that track."
+          ]
+        },
+        {
+          q: "5. Can I choose which afternoon track I attend?",
+          a: [
+          "Yes. The afternoon sessions are divided into three parallel tracks, so you can choose the track that best matches your interests."
+          ]
+        },
+        {
+          q: "6. How do I choose my afternoon track?",
+          a: [
+          "You can choose your preferred track at the <b>registration desk while scanning your QR code</b>.",
+          "Simply let the registration team know which track you would like to attend, and they will assign you to that track.",
+          "The available tracks are:",
+          ["<b>DevOps</b>", "<b>Cloud</b>", "<b>Data & AI</b>"],
+          "<b>Please note:</b> Seats for each track are limited and will be assigned on a <b>first come, first serve basis</b>. We recommend arriving early to get your preferred track."
+          ]
+        },
+        {
+          q: "7. How long are the afternoon sessions?",
+          a: [
+          "The afternoon track sessions run from <b>2:00 PM to 4:00 PM</b>.",
+          "After the sessions, please gather at <b>MV Sridhar Hall</b> for quizzes and activities."
+          ]
+        },
+        {
+          q: "8. Does every registered participant get a goodie bag?",
+          a: [
+          "Yes. <b>Every registered participant will receive a goodie bag.</b>"
+          ]
+        },
+        {
+          q: "9. Where can I collect my goodie bag?",
+          a: [
+          "The volunteers will guide you regarding the goodie bag collection point. If you are unsure, you can ask any volunteer for assistance."
+          ]
+        },
+        {
+          q: "10. Is lunch provided?",
+          a: [
+          "Yes, <b>lunch will be provided for registered participants.</b>",
+          "<b>Lunch timing: 1:00 PM - 2:00 PM</b>"
+          ]
+        },
+        {
+          q: "11. Where will lunch be served?",
+          a: [
+          "The volunteers will guide you to the lunch area. If you are unsure where to go, simply approach a volunteer or ask in the WhatsApp group."
+          ]
+        },
+        {
+          q: "12. What should I do after the 2:00 PM - 4:00 PM sessions?",
+          a: [
+          "After your afternoon session, please <b>gather at MV Sridhar Hall</b>.",
+          "We have some fun <b>quizzes and activities</b> planned, and you can also win prizes."
+          ]
+        }
+      ]
+    },
+    {
+      group: "Help & Assistance",
+      items: [
+        {
+          q: "12. How do I identify the volunteers?",
+          a: [
+          "Our volunteers will be wearing <b>event shirts and volunteer ID cards</b>.",
+          "If you need any assistance during the event, you can approach any volunteer."
+          ]
+        },
+        {
+          q: "13. Who should I contact if I have a question during the event?",
+          a: [
+          "Please <b>send your question in the official WhatsApp group</b>.",
+          "Our team will check the message and assist you accordingly."
+          ]
+        },
+        {
+          q: "14. What should I do if I lose something?",
+          a: [
+          "If you lose an item during the event, please send a message in the <b>WhatsApp group</b> with the details of the item.",
+          "Our team will check and get back to you."
+          ]
+        },
+        {
+          q: "15. What if I need help finding a session room?",
+          a: [
+          "You can approach any volunteer wearing the <b>event shirt and volunteer ID card</b>. They will guide you to the correct venue."
+          ]
+        },
+        {
+          q: "16. What if I need help finding the lunch area?",
+          a: [
+          "Please ask any volunteer. They will guide you to the lunch area.",
+          "You can also ask in the WhatsApp group."
+          ]
+        }
+      ]
+    },
+    {
+      group: "Registration & Event Experience",
+      items: [
+        {
+          q: "17. What should I do when I arrive at the venue?",
+          a: [
+          "Please head to the <b>registration/check-in area</b> first.",
+          "Once you complete the check-in process, the volunteers will guide you regarding the event schedule and venues."
+          ]
+        },
+        {
+          q: "18. Do I need to carry my registration details?",
+          a: [
+          "It is recommended that you keep your <b>registration confirmation/ticket accessible on your phone</b> , it is required during check-in."
+          ]
+        },
+        {
+          q: "19. Do I need prior AWS experience?",
+          a: [
+          "No. You can attend the sessions based on your interests and current level of knowledge.",
+          "The event covers topics across <b>AI, AWS, Cloud, DevOps, Data and Security</b>."
+          ]
+        },
+        {
+          q: "20. Can I switch between the afternoon tracks?",
+          a: [
+          "The afternoon tracks run in parallel, so you should choose the track you want to attend for the session.",
+          "If you have any questions about switching tracks, please check with the volunteers."
+          ]
+        },
+        {
+          q: "21. Is there anything I should bring?",
+          a: [
+          "Please carry:",
+          ["Your phone", "Registration confirmation", "College/student ID card", "Any essentials you may need during the event"]
+          ]
+        },
+        {
+          q: "22. Will there be a certificate?",
+          a: [
+          "Yes, registered participants will receive a <b>e-certificate</b> as part of the event."
+          ]
+        },
+        {
+          q: "23. What if I have any other questions?",
+          a: [
+          "You can always <b>ask a volunteer or message the official WhatsApp group</b>.",
+          "We are here to help you have a smooth experience throughout the event."
+          ]
+        }
+      ]
     }
   ],
   agenda: [

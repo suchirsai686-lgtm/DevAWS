@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin, Phone, Clock } from "lucide-react";
+import { ArrowRight, Check, Mic, Code, Zap, Users, Coffee, Package, Utensils, Gift, Award, Camera, Wifi, Monitor, Layout, Quote, MapPin, Phone, Clock, Info, ChevronDown } from "lucide-react";
 import { MeetupIcon, LinkedinIcon, InstagramIcon } from "./components/SocialIcons";
 import Navbar from "./components/Navbar";
 import ChallengePage from "./components/ChallengePage";
@@ -19,6 +19,7 @@ function SectionBadge({ icon: Icon, label }) {
 
 function App() {
   const [hash, setHash] = useState(() => window.location.hash);
+  const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
     const onHashChange = () => setHash(window.location.hash);
@@ -340,6 +341,51 @@ function App() {
             </div>
           </div>
         </section>
+        {/* FAQ */}
+        <section id="faq" className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
+          <div className="hero-glow-1" style={{ top: '10%', left: '-100px' }} />
+          <div className="hero-glow-2" style={{ bottom: '10%', right: '-100px' }} />
+          <div className="scd-container">
+            <div className="text-center">
+              <SectionBadge icon={Info} label="FAQ" />
+              <h2 className="section-title">Frequently asked <span className="gradient-text">questions</span></h2>
+              <p className="section-desc">Everything you need to know about the day — timings, tracks, food, and getting around.</p>
+            </div>
+            <div className="faq-wrap">
+              {eventData.faqs.map((group, gi) => (
+                <div key={group.group} className="faq-group">
+                  <h3 className="faq-group-title">{group.group}</h3>
+                  <div className="faq-list">
+                    {group.items.map((item, ii) => {
+                      const key = `${gi}-${ii}`;
+                      const isOpen = openFaq === key;
+                      return (
+                        <div key={key} className={`faq-item${isOpen ? " open" : ""}`}>
+                          <button type="button" className="faq-q" aria-expanded={isOpen} onClick={() => setOpenFaq(isOpen ? null : key)}>
+                            <span dangerouslySetInnerHTML={{ __html: item.q }} />
+                            <ChevronDown size={18} />
+                          </button>
+                          <div className="faq-a">
+                            <div className="faq-a-inner">
+                              {item.a.map((part, pi) =>
+                                Array.isArray(part) ? (
+                                  <ul key={pi}>{part.map((li, liI) => <li key={liI} dangerouslySetInnerHTML={{ __html: li }} />)}</ul>
+                                ) : (
+                                  <p key={pi} dangerouslySetInnerHTML={{ __html: part }} />
+                                )
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* HELP */}
         <section className="scd-section" style={{ borderTop: '1px solid rgba(255,255,255,.05)' }}>
           <div className="scd-container">
