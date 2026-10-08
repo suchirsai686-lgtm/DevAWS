@@ -303,11 +303,11 @@ export const eventData = {
     }
   ],
   agenda: [
-    { time: "9:00 AM – 10:00 AM", title: "Check-in & Registrations", desc: "Arrive, collect your badge and swag kit, grab a coffee, and settle in before the day begins.", icon: "checkin" },
+    { time: "9:00 AM – 10:00 AM", title: "Check-in & Registrations", desc: "Arrive, collect your badge and settle in before the day begins.", icon: "checkin" },
     { time: "10:00 AM – 10:30 AM", title: "Inauguration & Welcome Ceremony", desc: "Opening remarks from the AWS SBG MECS team and guests — the official start of SCD 2026.", icon: "ceremony" },
-    { time: "10:30 AM – 11:15 AM", title: "1st Speaker Session", desc: "The first masterclass of the day takes the stage.", icon: "speaker" },
-    { time: "11:15 AM – 12:00 PM", title: "2nd Speaker Session", desc: "Fresh perspectives from industry — keep the momentum going.", icon: "speaker" },
-    { time: "12:00 PM – 12:45 PM", title: "3rd Speaker Session", desc: "The final talk before we break for lunch.", icon: "speaker" },
+    { time: "10:30 AM – 11:15 AM", title: "Sathpal Singh  Topic: Agentic AI", desc: "The first masterclass of the day takes the stage.", icon: "speaker" },
+    { time: "11:15 AM – 12:00 PM", title: "Avinash  Topic: AI Agents", desc: "Fresh perspectives from industry — keep the momentum going.", icon: "speaker" },
+    { time: "12:00 PM – 12:45 PM", title: "Praveen  Topic: AWS security", desc: "The final talk before we break for lunch.", icon: "speaker" },
     { time: "1:00 PM – 2:00 PM", title: "Lunch Break", desc: "Refuel with a full buffet and network with speakers, sponsors, and fellow builders.", icon: "lunch" },
     { time: "2:00 PM – 5:00 PM", title: "Parallel Tracks", desc: "The room splits into 3 tracks — head to the one that matches your interest.", icon: "tracks", accent: true }
   ],
