@@ -88,6 +88,17 @@ export const eventData = {
       blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
       blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
       blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
+    },
+    {
+      name: "Snehith Allamraju",
+      role: "data analytics and AI leader with 19+ years of enterprise experience",
+      credential: "active volunteer in Hyderabad\u2019s data & tech community",
+      ambassador: "",
+      topic: "Data and AI",
+      image: "/speaker-3.jpeg",
+      blobRadius: "60% 40% 55% 45% / 55% 60% 40% 45%",
+      blobGradient: "linear-gradient(135deg, rgba(139,92,246,.18), rgba(217,70,239,.12))",
+      blobWidth: "75%", blobHeight: "80%", blobTop: "0%", blobLeft: "50%"
     }
   ],
   agenda: [

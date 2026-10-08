@@ -232,7 +232,7 @@ function App() {
                     <h3>{s.name}</h3>
                     <p className="role">{s.role}</p>
                     <p className="credential">{s.credential}</p>
-                    <p className="ambassador">{s.ambassador}</p>
+                    {s.ambassador && <p className="ambassador">{s.ambassador}</p>}
                     <div className="topic-box">
                       <div className="topic-header"><Mic size={16} /><div><span className="topic-label">Topic</span><p>{s.topic}</p></div></div>
                     </div>
